@@ -12,7 +12,9 @@ def tutorial(): #Definition for a function. The : is important, and notice how e
     tutorial()
 location = your ship
 print("Gazing out the ship window, you see Domuterum come into view.")
-
+print("As you approach the planet, you adjust your ship's velocity for entry.")
+print("This will be your first visit to Domuterum... and hopefully, you'll be able to settle here.")
+print("All your life, you've been travelling. But now it's time to stop, and find a place to stay.")
 def main():
   print("You are currently at "+location+".")
 
