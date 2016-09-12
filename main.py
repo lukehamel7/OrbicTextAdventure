@@ -30,7 +30,7 @@ def main():
   if response.lower() == "move to ship":
     ship()
   if response.lower() == "move to city":
-    move(city)
+    move("city")
   if response.lower() == "commands":
     commands()
     
