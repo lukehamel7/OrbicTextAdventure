@@ -35,7 +35,7 @@ def main():
     commands()
     
 def commands():
-  
+  print("I hope I remember to do this later")
 def ship():
   response = input("You access the ship computer. What would you like to do? ")
   if response.lower() == "information":
