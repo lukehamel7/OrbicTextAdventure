@@ -27,8 +27,10 @@ input()
 
 def main():
   response = input("You are currently at "+location+". What would you like to do? ")
-  if response.lower() == "ship":
+  if response.lower() == "move to ship":
     ship()
+  if response.lower() == "move to city":
+    move(city)
   if response.lower() == "commands":
     commands()
     
@@ -40,8 +42,12 @@ def ship():
     information()
   elif response.lower() == "leave":
     leaveShip()
-  elif response.lower() == "exit":
+  elif response.lower() == "move":
     main()
   else:
     ship()
+    
+def move(locationToMove):
+  location = locationToMove
+  main()
 main()
