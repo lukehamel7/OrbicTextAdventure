@@ -26,14 +26,15 @@ input()
 
 
 def main():
-  response = input("You are currently at "+location+". What would you like to do? ")
-  if response.lower() == "move to ship":
-    ship()
-  if response.lower() == "move to city":
-    move("city")
-  if response.lower() == "commands":
-    commands()
-    
+    response = input("You are currently at "+location+". What would you like to do? ")
+    if response.lower() == "move to ship":
+        ship()
+    elif response.lower() == "move to city":
+        move("city")
+    elif response.lower() == "commands":
+        commands()
+    else
+        main()    
 def commands():
   print("I hope I remember to do this later")
 def ship():
