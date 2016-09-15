@@ -12,7 +12,8 @@ def tutorial(): #Definition for a function. The : is important, and notice how e
   else:
     tutorial()
 tutorial() #The earlier code was just defining the tutorial, but now we're actually running it. If this were a one time thing we wouldn't bother with a function, but now the code can run any time it's called.
-global location = "your ship" #The 'location' string will be pretty important. It's also used in main(), so all location names should look decent when it says "You are currently at [location]". That's why I called it "your ship" and not just "ship".
+global location
+location = "your ship" #The 'location' string will be pretty important. It's also used in main(), so all location names should look decent when it says "You are currently at [location]". That's why I called it "your ship" and not just "ship".
 
 input("Gazing out the ship window, you see Domuterum come into view.") #We can change this name if we want to. It has latin roots with the word for "home" (domum) and the word for "past" (praeteritum).I figured a bit of foreshadowing was good.
 input("As you approach the planet, you adjust your ship's velocity for entry.")
@@ -22,12 +23,10 @@ input("Your ship lands and docks in a bustling city. You start making preparatio
 
 
 def core():
-    print(location)
     response = input("You are currently at "+location+". What would you like to do? ")
     if response.lower() == "move to ship":
         ship()
     elif response.lower() == "move to city":
-        print("This part works, asshat")
         move("city")
     elif response.lower() == "commands":
         commands()
@@ -47,9 +46,6 @@ def ship():
     ship()
     
 def move(locationToMove):
-    print("This part also works, bitch")
-    print(locationToMove)
     location = locationToMove
-    print(location)
     core()
 core()
