@@ -45,6 +45,7 @@ def ship():
   else:
     ship()
     
+
 def move(locationToMove):
     location = locationToMove
     core()
