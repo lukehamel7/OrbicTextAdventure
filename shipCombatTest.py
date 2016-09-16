@@ -1,9 +1,9 @@
 def shipCombat(playerX,playerY,playerD,enemyX,enemyY,enemyD): #So this is just a test, pretty hard to explain but hopefully I can get it to work. 
-  rowA = [0,0,0,0,0]
-  rowB = [0,0,0,0,0]
-  rowC = [0,0,0,0,0]
-  rowD = [0,0,0,0,0]
-  rowE = [0,0,0,0,0]
+  rowA = ["#","#","#","#","#"]
+  rowB = ["#","#","#","#","#"]
+  rowC = ["#","#","#","#","#"]
+  rowD = ["#","#","#","#","#"]
+  rowE = ["#","#","#","#","#"]
   if playerY == 1:
     del rowA[playerX-1]
     rowA.insert(playerX-1, ">")
