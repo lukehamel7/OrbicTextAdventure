@@ -5,15 +5,16 @@ def shipCombat(playerX,playerY,playerD,enemyX,enemyY,enemyD): #So this is just a
   rowD = [0,0,0,0,0]
   rowE = [0,0,0,0,0]
   if playerY == 3:
-    rowA.remove(playerY-1)
-    rowA.insert(playerY-1, >)
-  print(rowA)
-  print(rowB)
-  print(rowC)
-  print(rowD)
-  print(rowE)
-def start()
+    del rowC[playerX-1]
+    rowC.insert(playerX-1, ">")
+  print(rowA[0], rowA[1], rowA[2], rowA[3], rowA[4])
+  print(rowB[0], rowB[1], rowB[2], rowB[3], rowB[4])
+  print(rowC[0], rowC[1], rowC[2], rowC[3], rowC[4])
+  print(rowD[0], rowD[1], rowD[2], rowD[3], rowD[4])
+  print(rowE[0], rowE[1], rowE[2], rowE[3], rowE[4])
+  start()
+def start():
   starting = input("What position should the ship be in?")
   starting = int(starting)
-  shipCombat(3,starting,1,1,1,1)
+  shipCombat(starting,3,1,1,1,1)
 start()
