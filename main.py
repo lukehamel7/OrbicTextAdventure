@@ -12,41 +12,65 @@ def tutorial(): #Definition for a function. The : is important, and notice how e
   else:
     tutorial()
 tutorial() #The earlier code was just defining the tutorial, but now we're actually running it. If this were a one time thing we wouldn't bother with a function, but now the code can run any time it's called.
-global location
-location = "your ship" #The 'location' string will be pretty important. It's also used in main(), so all location names should look decent when it says "You are currently at [location]". That's why I called it "your ship" and not just "ship".
-
-input("Gazing out the ship window, you see Domuterum come into view.") #We can change this name if we want to. It has latin roots with the word for "home" (domum) and the word for "past" (praeteritum).I figured a bit of foreshadowing was good.
-input("As you approach the planet, you adjust your ship's velocity for entry.")
-input("This will be your first visit to Domuterum... and hopefully, you'll be able to settle here.")
-input("You've been travelling your whole life, but now is the time to find a place to stay.")
-input("Your ship lands and docks in a bustling city. You start making preparations to leave, unsure of what the future may hold.")
-
+def initialize():
+    global location
+    location = "your ship" #The 'location' string will be pretty important. It's also used in main(), so all location names should look decent when it says "You are currently at [location]". That's why I called it "your ship" and not just "ship".
+    input("Gazing out the ship window, you see Domuterum come into view.") #We can change this name if we want to. It has latin roots with the word for "home" (domum) and the word for "past" (praeteritum).I figured a bit of foreshadowing was good.
+    input("As you approach the planet, you adjust your ship's velocity for entry.")
+    input("This will be your first visit to Domuterum... and hopefully, you'll be able to settle here.")
+    input("You've been travelling your whole life, but now is the time to find a place to stay.")
+    input("Your ship lands and docks in a bustling city. You start making preparations to leave, unsure of what the future may hold.")
+initialize()
 
 def core():
     response = input("You are currently at "+location+". What would you like to do? ")
-    if response.lower() == "move to ship":
+    if response.lower() == "ship":
         ship()
-    elif response.lower() == "move to city":
-        move("city")
+    elif response.lower() == "move to city" and location == "your ship":
+        move("the city")
+    elif response.lower() == "move to ship" and location == "the city":
+        move("your ship")
     elif response.lower() == "commands":
         commands()
+    elif response.lower() == "map":
+        map()
+    elif response.lower() == "quit":
+        quit()
     else:
         core()    
 def commands():
-  print("I hope I remember to do this later")
+  print("Use 'quit' to exit the game.")
+  print("Use 'move to [location]' to go somewhere.")
+  print("Use 'map' to find locations to move to.")
+  print("When at your ship, use 'ship' to access the ship computer. Or, use it to exit the ship computer.")
+  print("When using your ship computer, use 'leave' to fly to another planet.")
+  core()
 def ship():
   response = input("You access the ship computer. What would you like to do? ")
   if response.lower() == "information":
     information()
   elif response.lower() == "leave":
     leaveShip()
-  elif response.lower() == "move":
+  elif response.lower() == "ship":
     core()
   else:
     ship()
     
 
 def move(locationToMove):
+    global location
     location = locationToMove
+    print (locationToMove)
+    print (location)
     core()
+    
+def map():
+    print("Here are the places you can move to:")
+    if location == "your ship": 
+        print("city")
+    if location == "the city":
+        print("ship")
+    core()
+def quit():
+    print("Okay.")
 core()
