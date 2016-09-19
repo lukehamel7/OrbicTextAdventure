@@ -15,12 +15,14 @@ tutorial() #The earlier code was just defining the tutorial, but now we're actua
 def initialize():
     global location
     location = "your ship" #The 'location' string will be pretty important. It's also used in main(), so all location names should look decent when it says "You are currently at [location]". That's why I called it "your ship" and not just "ship".
+    global planet
+    planet = "domaterum"
     input("Gazing out the ship window, you see Domuterum come into view.") #We can change this name if we want to. It has latin roots with the word for "home" (domum) and the word for "past" (praeteritum).I figured a bit of foreshadowing was good.
     input("As you approach the planet, you adjust your ship's velocity for entry.")
     input("This will be your first visit to Domuterum... and hopefully, you'll be able to settle here.")
     input("You've been travelling your whole life, but now is the time to find a place to stay.")
     input("Your ship lands and docks in a bustling city. You start making preparations to leave, unsure of what the future may hold.")
-initialize()
+
 
 def core():
     response = input("You are currently at "+location+". What would you like to do? ")
@@ -53,6 +55,8 @@ def ship():
     leaveShip()
   elif response.lower() == "ship":
     core()
+  elif response.lower() == "info":
+    info()
   else:
     ship()
     
@@ -73,4 +77,7 @@ def map():
     core()
 def quit():
     print("Okay.")
+def info():
+    
+initialize()
 core()
