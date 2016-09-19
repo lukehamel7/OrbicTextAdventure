@@ -46,11 +46,12 @@ def commands():
   print("Use 'map' to find locations to move to.")
   print("When at your ship, use 'ship' to access the ship computer. Or, use it to exit the ship computer.")
   print("When using your ship computer, use 'leave' to fly to another planet.")
+  print("Or use 'info' to find information")
   core()
 def ship():
   response = input("You access the ship computer. What would you like to do? ")
-  if response.lower() == "information":
-    information()
+  if response.lower() == "info":
+    info()
   elif response.lower() == "leave":
     leaveShip()
   elif response.lower() == "ship":
@@ -78,6 +79,7 @@ def map():
 def quit():
     print("Okay.")
 def info():
+    response = input("Get info on what?")
     
 initialize()
 core()
