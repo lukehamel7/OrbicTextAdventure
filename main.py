@@ -17,9 +17,9 @@ def initialize():
     location = "your ship" #The 'location' string will be pretty important. It's also used in main(), so all location names should look decent when it says "You are currently at [location]". That's why I called it "your ship" and not just "ship".
     global planet
     planet = "domaterum"
-    input("Gazing out the ship window, you see Domuterum come into view.") #We can change this name if we want to. It has latin roots with the word for "home" (domum) and the word for "past" (praeteritum).I figured a bit of foreshadowing was good.
+    input("Gazing out the ship window, you see Domaterum come into view.") #We can change this name if we want to. It has latin roots with the word for "home" (domum) and the word for "past" (praeteritum).I figured a bit of foreshadowing was good.
     input("As you approach the planet, you adjust your ship's velocity for entry.")
-    input("This will be your first visit to Domuterum... and hopefully, you'll be able to settle here.")
+    input("This will be your first visit to Domaterum... and hopefully, you'll be able to settle here.")
     input("You've been travelling your whole life, but now is the time to find a place to stay.")
     input("Your ship lands and docks in a bustling city. You start making preparations to leave, unsure of what the future may hold.")
 
@@ -34,7 +34,7 @@ def core():
         move("your ship")
     elif response.lower() == "commands":
         commands()
-    elif response.lower() == "map":
+    elif response.lower() == "use map":
         map()
     elif response.lower() == "quit":
         quit()
@@ -76,10 +76,30 @@ def map():
     if location == "the city":
         print("ship")
     core()
+    
+def inventory:
+  print("You currently own:")
+  print("Ship manual")
+  print("Map") 
+  core()
+  
 def quit():
     print("Okay.")
 def info():
     response = input("Get info on what?")
+    if response == "planet":
+      planetInfo()
+    core()
+   
+def planetInfo():
+   print("Planet: "+planet)
+    if planet == "domaterum":
+      print("This planet was discovered fairly recently, and has since had a major influx of Acrylite refugees after the destruction of their planet.")
+      print("[INSERT ORBIC'S STORY PLOT HERE]") 
+      print("Since then, the capital of [CITY NAME] has flourished as well as other settlements. Much of the planet remains in a more natural state.")
+      print("Economists predict that Domaterum will become a Class-4 planet in 30 years or less.")
+    core()
+    
     
 initialize()
 core()
