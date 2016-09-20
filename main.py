@@ -77,7 +77,7 @@ def map():
         print("ship")
     core()
     
-def inventory:
+def inventory():
   print("You currently own:")
   print("Ship manual")
   print("Map") 
@@ -93,12 +93,12 @@ def info():
    
 def planetInfo():
    print("Planet: "+planet)
-    if planet == "domaterum":
+   if planet == "domaterum":
       print("This planet was discovered fairly recently, and has since had a major influx of Acrylite refugees after the destruction of their planet.")
       print("[INSERT ORBIC'S STORY PLOT HERE]") 
       print("Since then, the capital of [CITY NAME] has flourished as well as other settlements. Much of the planet remains in a more natural state.")
       print("Economists predict that Domaterum will become a Class-4 planet in 30 years or less.")
-    core()
+   core()
     
     
 initialize()
