@@ -18,14 +18,18 @@ def initialize():
     location = "your ship" #The 'location' string will be pretty important. It's also used in main(), so all location names should look decent when it says "You are currently at [location]". That's why I called it "your ship" and not just "ship".
     global planet
     planet = "domaterum"
+    global cityFirstTime
+    cityFirstTime = true 
     input("Gazing out the ship window, you see Domaterum come into view.") #We can change this name if we want to. It has latin roots with the word for "home" (domum) and the word for "past" (praeteritum).I figured a bit of foreshadowing was good.
     input("As you approach the planet, you adjust your ship's velocity for entry.")
     input("This will be your first visit to Domaterum... and hopefully, you'll be able to settle here.")
     input("You've been travelling your whole life, but now is the time to find a place to stay.")
-    input("Your ship lands and docks in a bustling city. You start making preparations to leave, unsure of what the future may hold.")
+    input("Your ship lands and docks just outside of a bustling city. You start making preparations to leave, unsure of what the future may hold.")
 
-
+#Basic Functions
 def core():
+    if location == "city" and cityFirstTime == true:
+      cityFirstTime()
     response = input("You are currently at "+location+". What would you like to do? ")
     if response.lower() == "ship":
         ship()
@@ -101,6 +105,15 @@ def planetInfo():
       print("Economists predict that Domaterum will become a Class-4 planet in 30 years or less.")
    core()
     
-    
+#Plot events
+def cityFirstTime():
+  input("As you walk into the city, you are flooded with advertisements and crowds.")
+  input("This planet was established pretty recently, but since then immense progress has been made.")
+  input("You notice the various different citizens, a mess of colors and body compositions.")
+  input("Everyone here walks as if they're late, and you feel somewhat out of place.")
+  input("Except, in the midst of all the movement, you notice one stationary person.")
+  input("A slender man, with green, scaly skin and deeply sunken cheeks, stands in front of a building.")
+  input("
+  
 initialize()
 core()
