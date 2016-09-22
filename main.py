@@ -13,6 +13,7 @@ def tutorial(): #Definition for a function. The : is important, and notice how e
     tutorial()
 tutorial() #The earlier code was just defining the tutorial, but now we're actually running it. If this were a one time thing we wouldn't bother with a function, but now the code can run any time it's called.
 def initialize():
+    import sys
     global location
     location = "your ship" #The 'location' string will be pretty important. It's also used in main(), so all location names should look decent when it says "You are currently at [location]". That's why I called it "your ship" and not just "ship".
     global planet
