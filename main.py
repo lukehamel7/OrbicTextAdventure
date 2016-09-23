@@ -19,7 +19,7 @@ def initialize():
     global planet
     planet = "domaterum"
     global cityFirstTime
-    cityFirstTime = true 
+    cityFirstTime = True 
     input("Gazing out the ship window, you see Domaterum come into view.") #We can change this name if we want to. It has latin roots with the word for "home" (domum) and the word for "past" (praeteritum).I figured a bit of foreshadowing was good.
     input("As you approach the planet, you adjust your ship's velocity for entry.")
     input("This will be your first visit to Domaterum... and hopefully, you'll be able to settle here.")
@@ -28,7 +28,7 @@ def initialize():
 
 #Basic Functions
 def core():
-    if location == "city" and cityFirstTime == true:
+    if location == "city" and cityFirstTime == True:
       cityFirstTime()
     response = input("You are currently at "+location+". What would you like to do? ")
     if response.lower() == "ship":
@@ -115,7 +115,7 @@ def cityFirstTime():
   input("A slender man, with green, scaly skin and deeply sunken cheeks, stands in front of a building.")
   
   global cityFirstTime
-  cityFirstTime = false
+  cityFirstTime = False
   core()
   
 initialize()
