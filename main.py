@@ -18,8 +18,8 @@ def initialize():
     location = "your ship" #The 'location' string will be pretty important. It's also used in main(), so all location names should look decent when it says "You are currently at [location]". That's why I called it "your ship" and not just "ship".
     global planet
     planet = "domaterum"
-    global cityFirstTime
-    cityFirstTime = True 
+    global cityFirstTimeCheck
+    cityFirstTimeCheck = True 
     input("Gazing out the ship window, you see Domaterum come into view.") #We can change this name if we want to. It has latin roots with the word for "home" (domum) and the word for "past" (praeteritum).I figured a bit of foreshadowing was good.
     input("As you approach the planet, you adjust your ship's velocity for entry.")
     input("This will be your first visit to Domaterum... and hopefully, you'll be able to settle here.")
@@ -28,7 +28,7 @@ def initialize():
 
 #Basic Functions
 def core():
-    if location == "city" and cityFirstTime == True:
+    if location == "the city" and cityFirstTimeCheck == True:
       cityFirstTime()
     response = input("You are currently at "+location+". What would you like to do? ")
     if response.lower() == "ship":
@@ -114,8 +114,8 @@ def cityFirstTime():
   input("Except, in the midst of all the movement, you notice one stationary person.")
   input("A slender man, with green, scaly skin and deeply sunken cheeks, stands in front of a building.")
   
-  global cityFirstTime
-  cityFirstTime = False
+  global cityFirstTimeCheck
+  cityFirstTimeCheck = False
   core()
   
 initialize()
