@@ -113,7 +113,10 @@ def cityFirstTime():
   input("Everyone here walks as if they're late, and you feel somewhat out of place.")
   input("Except, in the midst of all the movement, you notice one stationary person.")
   input("A slender man, with green, scaly skin and deeply sunken cheeks, stands in front of a building.")
-  input("
+  
+  global cityFirstTime
+  cityFirstTime = false
+  core()
   
 initialize()
 core()
