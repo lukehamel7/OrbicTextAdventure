@@ -1,5 +1,4 @@
-#Orbic Legacy 2016 Luke Hamel 
-#Connor, if you're seeing this, put your name on that top line and delete this. I'm adding a bunch of comments so you can figure this out.
+#Orbic Legacy 2016 Luke Hamel & Connor Jordan
 print("Welcome to Orbic Legacy.") #Here's a print statement. I believe this was Echo in batch? The format is pretty easy, just print(). Remember that, unless it's a variable, it must have "" around it also. So a variable would look like print(string), but a certain line of text would read print("text"). You can also add them, I believe that's done like print("text"+string)
 def tutorial(): #Definition for a function. The : is important, and notice how everything within the function is indented. That's not just for looks, it's required.
   response = input("Do you want to play the tutorial? ") #input, which we'll be using a lot for a text adventure. The parentheses are a prompt, so it would look like print("Response? ") Remember to leave a space so it looks better.
