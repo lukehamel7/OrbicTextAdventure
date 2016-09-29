@@ -32,3 +32,4 @@ def start():
   starting2 = int(starting2)
   shipCombat(starting,starting2,1,1,1,1)
 start()
+#harder daddy
