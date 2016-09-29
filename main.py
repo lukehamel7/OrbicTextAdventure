@@ -7,11 +7,12 @@ print("  |   \/   |       \       \  |  I      __.`-    \  |  |_ |    /\  |   \/
 print("  |        |        \_     |  |   `-`\ /         ;  |_ |_ |_| /..\ |_  /")
 print("  \________/___/\____/_____/___\____,'/_______.-`______________ ____  ___")
 print("                            .'`      /        /        \       \\   \/  /")
-print("                           ;    ____/__     __|        |       | \     /")
-print("                           \_     `.   |   |  |   /\   |       /  \   /")
-print("                           ___`-    \  |   |  |   \/   |       \  /  / ")
-print("                          /         ;  |   |  |        |        \/  /  ")
-print("                         /_______.-`  /_____  \________/___/\______/ ")
+print("         A Text            ;    ____/__     __|        |       | \     /")
+print("        Adventure          \_     `.   |   |  |   /\   |       /  \   /")
+print("           by              ___`-    \  |   |  |   \/   |       \  /  / ")
+print("      Luke Hamel &        /         ;  |    \ |        |        \/  /  ")
+print("      Connor Jordan      /_______.-`  /_______\________/___/\______/ ")
+print("   ")
 def tutorial():
   response = input("Would you like to play the tutorial? ")
   if response.lower() == "yes":
