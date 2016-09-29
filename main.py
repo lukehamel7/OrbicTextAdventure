@@ -1,8 +1,20 @@
 #Orbic Legacy 2016 Luke Hamel & Connor Jordan
-print("") #Here's a print statement. I believe this was Echo in batch? The format is pretty easy, just print(). Remember that, unless it's a variable, it must have "" around it also. So a variable would look like print(string), but a certain line of text would read print("text"). You can also add them, I believe that's done like print("text"+string)
-def tutorial(): #Definition for a function. The : is important, and notice how everything within the function is indented. That's not just for looks, it's required.
-  response = input("Do you want to play the tutorial? ") #input, which we'll be using a lot for a text adventure. The parentheses are a prompt, so it would look like print("Response? ") Remember to leave a space so it looks better.
-  if response.lower() == "yes": #string.lower() makes a string lowercase, so the statement is now case insensitive. Anyway, if statement, remember == and because response is a string, we can only check it against other strings. So we need to check it with "yes", not yes.
+print("   ____________________________________    _______")
+print("  /        \       \     \     /    `./ .'`      /")
+print("  |        |       |     /    |   .-./ ;    ____/")
+print("  |   /\   |       /      \   |  |      \_     `.       _  _        _")
+print("  |   \/   |       \       \  |  I      __.`-    \  |  |_ |    /\  |   \/")
+print("  |        |        \_     |  |   `-`\ /         ;  |_ |_ |_| /..\ |_  /")
+print("  \________/___/\____/_____/___\____,'/_______.-`______________ ____  ___")
+print("                            .'`      /        /        \       \\   \/  /")
+print("                           ;    ____/__     __|        |       | \     /")
+print("                           \_     `.   |   |  |   /\   |       /  \   /")
+print("                           ___`-    \  |   |  |   \/   |       \  /  / ")
+print("                          /         ;  |   |  |        |        \/  /  ")
+print("                         /_______.-`  /_____  \________/___/\______/ ")
+def tutorial():
+  response = input("Would you like to play the tutorial? ")
+  if response.lower() == "yes":
     print("To advance text with a full stop (.), simply press enter. For text with a question mark (?), type a response first.")
     input() #This doesn't actually save to anything, it's just to force the player to press enter. Otherwise all the text would display at once.
     print("Will add more to this when there are actual game mechanics to describe.")
