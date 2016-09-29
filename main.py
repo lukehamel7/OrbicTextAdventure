@@ -10,8 +10,8 @@ print("                            .'`      /        /        \       \\   \/  /
 print("         A Text            ;    ____/__     __|        |       | \     /")
 print("        Adventure          \_     `.   |   |  |   /\   |       /  \   /")
 print("           by              ___`-    \  |   |  |   \/   |       \  /  / ")
-print("      Luke Hamel &        /         ;  |    \ |        |        \/  /  ")
-print("      Connor Jordan      /_______.-`  /_______\________/___/\______/ ")
+print("        [company name               ;  |    \ |        |        \/  /  ")
+print("      here        ]      /_______.-`  /_______\________/___/\______/ ")
 print("   ")
 def tutorial():
   response = input("Would you like to play the tutorial? ")
