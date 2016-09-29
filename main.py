@@ -16,8 +16,8 @@ print("   ")
 def tutorial():
   response = input("Would you like to play the tutorial? ")
   if response.lower() == "yes":
-    print("To advance text with a full stop (.), simply press enter. For text with a question mark (?), type a response first.")
-    input() #This doesn't actually save to anything, it's just to force the player to press enter. Otherwise all the text would display at once.
+    print("To advance past statements or events (.), simply press enter. For questions (?), type a response first.")
+    input()
     print("Will add more to this when there are actual game mechanics to describe.")
   elif response.lower() == "no": #Else if, works pretty much the same as def and if. But, you know. Else if. 
     print("Type 'Tutorial' at any time to view the tutorial, or 'Commands' for a command list.")
