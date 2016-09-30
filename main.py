@@ -1,17 +1,17 @@
 #Orbic Legacy 2016 Luke Hamel & Connor Jordan
-print("   _________________________________    ")
-print("  /        \       \     \     /    `.  ")
-print("  |        |       |     /    |   .-./     ")
-print("  |   /\   |       /      \   |  |           ")
-print("  |   \/   |       \       \  |  I           ")
-print("  |        |        \_     |  |   `-`\      ")
-print("  \________/___/\____/_____/___\____,i'_        ___       ____  ___    ___ ")
-print("             \    ;   \    ___ /`   __  \      /    \    /     `.\   \/   /    ")
-print("              |   |    |  [   \|   /  `_/     /      \  |    .-./  \     /    ") 
-print("              |   |    |   `-_ |  |  ____    /    .   \ |   |       /   /  ") 
-print("              |   \   /|   /`  |  | |__  |  /    __    \|   I      /   /     ") 
-print("              |    `-` |  [___/|   ` `   | /   .'  '.   \   `-`\_/   /      ")
-print("              /________/________\_____/\_|/____\    /____\___________\       ")
+print("   __________________________________    ")
+print("  /        \       \     \     /     `.  ")
+print("  |        |       |     /    |    .-./             A Text Adventure   ")
+print("  |   /\   |       /      \   |   |                        by   ")
+print("  |   \/   |       \       \  |   I                           ")
+print("  |        |        \_     |  |    `-`\      ")
+print("  \________/___/\____/_____/___\_____,i'     ___       ____  ____    ___ ")
+print("             \    ;   \    ___ /`   __  \   /    \    /     `.\   \/   /    ")
+print("              |   |    |  [   \|   /  `_/  /      \  |    .-./  \     /    ") 
+print("              |   |    |   `-_ |  |  ____ /    .   \ |   |       /   /  ") 
+print("              |   \   /|   /`  |  | |__  |    __    \|   I      /   /     ") 
+print("              |    `-` |  [___/|   ` `   |  .'  '.   \   `-`\_/   /      ")
+print("              /________/________\_____/\_|__\    /____\___________\       ")
 print("   ")
 def tutorial():
   response = input("Would you like to play the tutorial? ")
@@ -32,11 +32,15 @@ def initialize():
     planet = "domaterum"
     global cityFirstTimeCheck
     cityFirstTimeCheck = True 
-    input("Gazing out the ship window, you see Domaterum come into view.") #We can change this name if we want to. It has latin roots with the word for "home" (domum) and the word for "past" (praeteritum).I figured a bit of foreshadowing was good.
-    input("As you approach the planet, you adjust your ship's velocity for entry.")
-    input("This will be your first visit to Domaterum... and hopefully, you'll be able to settle here.")
+    input("What is your name? ")
+    global playername
+    playername = input("What is your name? ")
+    input("'Cryosuspension releasing. Good morning, "+playername+". Welcome to Domaterum.")
+    input("Through the surrounding windows, a brilliant white horizon blossoms upward.")
+    input("As your ship flies ever closer to the planet, you adjust velocity for entry.")
     input("You've been travelling your whole life, but now is the time to find a place to stay.")
-    input("Your ship lands and docks just outside of a bustling city. You start making preparations to leave, unsure of what the future may hold.")
+    input("This will be your first visit to Domaterum... and hopefully, you'll be able to settle here.")
+    input("Your ship lands and docks just outside of a bustling city. You prepare to leave, unsure of what the future may hold.")
 
 #Basic Functions
 def core():
