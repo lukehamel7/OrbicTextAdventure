@@ -107,8 +107,6 @@ def ship():
 def move(locationToMove):
   global location
   location = locationToMove
-  print (locationToMove)
-    print (location)
   core()
     
 def map():
