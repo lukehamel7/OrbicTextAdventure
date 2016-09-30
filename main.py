@@ -96,11 +96,11 @@ def commands():
   print("Use 'map' to find locations to move to.")
   print("When at your ship, use 'ship' to access the ship computer. Or, use it to exit the ship computer.")
   print("When using your ship computer, use 'leave' to fly to another planet.")
-  print("Or use 'info' to find information")
-  print("Don't forget, 'Hugh Mungus' fixes your pronouns.")
+  print("Or use 'info' to find information.")
   core()
 def ship():
-  response = input("You access the ship computer. What would you like to do? ")
+  print("<<Welcome to OorbOS v3.04. Ship #3348 - The Ravager>>")
+  response = input("What would you like to do, "+playerName+"?")
   if response.lower() == "info":
     info()
   elif response.lower() == "leave":
