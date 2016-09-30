@@ -140,7 +140,8 @@ def map():
 def inventory():
   print("You currently own:")
   print("Ship manual")
-  print("Map") 
+  print("Map")
+  input()
   core()
   
 def quit():
@@ -159,6 +160,20 @@ def planetInfo():
     print("Since then, the capital of [CITY NAME] has flourished as well as other settlements. Much of the planet remains in a more natural state.")
     print("Economists predict that Domaterum will become a Class-4 planet in 30 years or less.")
   core()
+  
+def locationInfo():
+  response = input("Get info on which location?"
+  if response.lower() == "ship":
+    input("This ship is a GX-1600 medium transport shuttle, designed for long distance travel."
+    input("It contains 2 separate sleeping areas with a total of 8 beds."
+    input("While not created for combat, it features 2 PLO-4 laser cannons."
+  elif response.lower() == "dock":
+    input("Dock 825 of [City name] is just one of many medium-sized docks in the area.")
+    input("These docks are rented ahead of time, and most citizens find them to be affordable and accessible.")
+    input("The fees were originally very high, but the City had voted to lower the price in exchange for slightly higher taxes.")
+  else:
+    input("Location not found.")
+    info()
     
 #Plot events
 def cityFirstTime():
