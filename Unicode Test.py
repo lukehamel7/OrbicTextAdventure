@@ -10,3 +10,4 @@ try:
   print("Test: Uncommon character using code \u0394")
 except:
   print("Well that didn't work.")
+input()
