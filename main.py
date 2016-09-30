@@ -34,7 +34,7 @@ def initialize():
   global cityFirstTimeCheck
   cityFirstTimeCheck = True 
     
-  while True:
+  while True: #Interesting loop here. The while would normally loop forever, but 'break' forces it to exit the loop. This way, it won't continue until the player has typed "yes".
     global playerName
     playerName = input("What is the name of the main character? ")
     response = input("Is "+playerName+" the name you want?")
