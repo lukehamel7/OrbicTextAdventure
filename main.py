@@ -58,8 +58,6 @@ def initialize():
       playerPronoun = "she"
       playerPosPronoun = "her"
       break
- 
-
       
   input(""+playerName+"'s ship exits hyperspace as a planet begins to enter "+playerPosPronoun+" view.")
   input("Through the surrounding windows, a brilliant white horizon blossoms upward.")
@@ -68,9 +66,8 @@ def initialize():
   input("This will be "+playerPosPronoun+" first visit to Domaterum... hopefully, "+playerPronoun+"'ll be able to settle here.")
   input("The ship lands and docks just outside of a bustling city. "+playerName+" prepares to leave, unsure of what the future may hold.")
 
-
   
-
+  
 #Basic Functions
 def core():
   if location == "the city" and cityFirstTimeCheck == True:
@@ -123,12 +120,13 @@ def info():
   print("Information Library:")
   print("<<< Location Info >>>")
   print("<<<  Inventory   >>>")
-  print("<<<     Log      >>>")
   print("<<< Planet Info  >>>")
   if response.lower() == "location info"
     locationInfo()
   if response.lower() == "inventory"
     inventoryInfo()
+  if response.lower() == planet info
+    planetInfo()
 def map():
   print("Here are the places you can move to:")
   if location == "your ship": 
@@ -137,7 +135,7 @@ def map():
     print("ship")
   core()
     
-def inventory():
+def inventoryInfo():
   print("You currently own:")
   print("Ship manual")
   print("Map")
