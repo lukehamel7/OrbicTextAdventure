@@ -16,9 +16,10 @@ print("   ")
 def tutorial():
   response = input("Would you like to play the tutorial? ")
   if response.lower() == "yes":
-    print("To advance past statements or events (.), simply press enter. For questions (?), type a response first.")
-    input()
-    print("Will add more to this when there are actual game mechanics to describe.")
+    input("To advance past statements or events (.), simply press enter. For questions (?), type a response first.")
+    input("For multiple choice questions, only type the corresponding number.")
+    input("For 'yes or no' questions, type 'yes' or 'no'.")
+    input("Will add more to this when there are actual game mechanics to describe.")
   elif response.lower() == "no": #Else if, works pretty much the same as def and if. But, you know. Else if. 
     print("Type 'Tutorial' at any time to view the tutorial, or 'Commands' for a command list.")
   else:
@@ -32,15 +33,34 @@ def initialize():
     planet = "domaterum"
     global cityFirstTimeCheck
     cityFirstTimeCheck = True 
-    input("What is your name? ")
-    global playername
-    playername = input("What is your name? ")
-    input("'Cryosuspension releasing. Good morning, "+playername+". Welcome to Domaterum.")
+    
+    while 1:
+      global playerName
+        playerName = input("What is the name of the main character? ")
+        response = input("Is "+playerName+" the name you want?")
+      if response.lower == "yes":
+        break
+   
+    while 1:
+      response = input("Is the main character male (1) or female (2)?")
+      if response.lower == "1"
+        playerGender = 0
+        break
+      elif response.lower == "2"
+        playerGender = 1
+        break
+ 
+
+      
+    input("Your ship exits hyperspace as a planet begins to enter your view..")
     input("Through the surrounding windows, a brilliant white horizon blossoms upward.")
     input("As your ship flies ever closer to the planet, you adjust velocity for entry.")
     input("You've been travelling your whole life, but now is the time to find a place to stay.")
     input("This will be your first visit to Domaterum... and hopefully, you'll be able to settle here.")
     input("Your ship lands and docks just outside of a bustling city. You prepare to leave, unsure of what the future may hold.")
+
+
+  
 
 #Basic Functions
 def core():
