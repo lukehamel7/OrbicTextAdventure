@@ -39,15 +39,15 @@ def initialize():
     playerName = input("What is the name of the main character? ")
     response = input("Is "+playerName+" the name you want?")
     print(response)
-    if response.lower == "yes":
+    if response.lower() == "yes":
       break
    
   while True:
     response = input("Is the main character male (1) or female (2)?")
-    if response.lower == "1":
+    if response.lower() == "1":
       playerGender = 0
       break
-    elif response.lower == "2":
+    elif response.lower() == "2":
       playerGender = 1
       break
  
