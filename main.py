@@ -5,13 +5,13 @@ print("  |        |       |     /    |    .-./             A Text Adventure   ")
 print("  |   /\   |       /      \   |   |                        by   ")
 print("  |   \/   |       \       \  |   I            Luke Hamel & Connor Jordan")
 print("  |        |        \_     |  |    `-`\      ")
-print("  \________/___/\____/_____/___\_____,i'     ___       ____  ____    ___ ")
-print("             \    ;   \    ___ /`   __  \   /    \    /     `.\   \/   /    ")
-print("              |   |    |  [   \|   /  `_/  /      \  |    .-./  \     /    ") 
-print("              |   |    |   `-_ |  |  ____ /    .   \ |   |       /   /  ") 
-print("              |   \   /|   /`  |  | |__  |    __    \|   I      /   /     ") 
-print("              |    `-` |  [___/|   ` `   |  .'  '.   \   `-`\_/   /      ")
-print("              /________/________\_____/\_|__\    /____\___________\       ")
+print("  \________/___/\____/_____/___\_____,i'_     ___       ____  ____    ___ ")
+print("             \    ;   \     ___ /`   __  \   /    \    /     `.\   \/   /    ")
+print("              |   |    |   [   \|   /  `_/  /      \  |    .-./  \     /    ") 
+print("              |   |    |    `-_ |  |  ____ /    .   \ |   |       /   /  ") 
+print("              |   \   /|    /`  |  | |__  |    __    \|   I      /   /     ") 
+print("              |    `-` |   [___/|   ` `   |  .'  '.   \   `-`\_/   /      ")
+print("              /________/_________\_____/\_|__\    /____\___________\       ")
 print("   ")
 def tutorial():
   response = input("Would you like to play the tutorial? ")
@@ -61,11 +61,11 @@ def initialize():
  
 
       
-  input(""+playerName+"'s ship exits hyperspace as a planet begins to enter "+playerPosPronoun+" view..")
+  input(""+playerName+"'s ship exits hyperspace as a planet begins to enter "+playerPosPronoun+" view.")
   input("Through the surrounding windows, a brilliant white horizon blossoms upward.")
   input("As "+playerPosPronoun+" ship flies ever closer to the planet, "+playerPronoun+" adjusts velocity for entry.")
   input("They've been travelling their whole life, but now is the time to find a place to stay.")
-  input("This will be "+playerPosPronoun+" first visit to Domaterum... and hopefully, "+playerPronoun+"'ll be able to settle here.")
+  input("This will be "+playerPosPronoun+" first visit to Domaterum... hopefully, "+playerPronoun+"'ll be able to settle here.")
   input("The ship lands and docks just outside of a bustling city. "+playerName+" prepares to leave, unsure of what the future may hold.")
 
 
@@ -100,6 +100,7 @@ def commands():
   core()
 def ship():
   print("<<Welcome to OorbOS v3.04. Ship #3348 - The Ravager>>")
+  print("   ")
   response = input("What would you like to do, "+playerName+"?")
   if response.lower() == "info":
     info()
@@ -117,7 +118,17 @@ def move(locationToMove):
   global location
   location = locationToMove
   core()
-    
+
+def info():
+  print("Information Library:")
+  print("<<<     Map      >>>")
+  print("<<<  Inventory   >>>")
+  print("<<<     Log      >>>")
+  print("<<< Planet Info  >>>")
+  if response.lower() == "map"
+    map()
+  if response.lower() == "inventory"
+  
 def map():
   print("Here are the places you can move to:")
   if location == "your ship": 
@@ -152,8 +163,8 @@ def planetInfo():
 #Plot events
 def cityFirstTime():
   input("As you walk into the city, you are flooded with advertisements and crowds.")
-  input("This planet was established pretty recently, but since then immense progress has been made.")
-  input("You notice the various different citizens, a mess of colors and body compositions.")
+  input("This planet was established pretty recently, but even since then immense progress has been made.")
+  input("You notice the variety of citizens, a mess of colors and compositions.")
   input("Everyone here walks as if they're late, and you feel somewhat out of place.")
   input("Except, in the midst of all the movement, you notice one stationary person.")
   input("A slender man, with green, scaly skin and deeply sunken cheeks, stands in front of a building.")
