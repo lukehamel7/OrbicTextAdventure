@@ -121,14 +121,14 @@ def move(locationToMove):
 
 def info():
   print("Information Library:")
-  print("<<<     Map      >>>")
+  print("<<< Location Info >>>")
   print("<<<  Inventory   >>>")
   print("<<<     Log      >>>")
   print("<<< Planet Info  >>>")
-  if response.lower() == "map"
-    map()
+  if response.lower() == "location info"
+    locationInfo()
   if response.lower() == "inventory"
-  
+    inventoryInfo()
 def map():
   print("Here are the places you can move to:")
   if location == "your ship": 
