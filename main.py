@@ -34,7 +34,7 @@ def initialize():
   global cityFirstTimeCheck
   cityFirstTimeCheck = True 
     
-  while True: #Interesting loop here. The while would normally loop forever, but 'break' forces it to exit the loop. This way, it won't continue until the player has typed "yes".
+  while True:
     global playerName
     playerName = input("What is the name of the main character? ")
     response = input("Is "+playerName+" the name you want?")
@@ -42,23 +42,31 @@ def initialize():
     if response.lower() == "yes":
       break
    
+  global playerGender
+  global playerPronoun
+  global playerPosPronoun
+  
   while True:
     response = input("Is the main character male (1) or female (2)?")
     if response.lower() == "1":
       playerGender = 0
+      playerPronoun = "he"
+      playerPosPronoun = "his"
       break
     elif response.lower() == "2":
       playerGender = 1
+      playerPronoun = "she"
+      playerPosPronoun = "her"
       break
  
 
       
-  input("Your ship exits hyperspace as a planet begins to enter your view..")
+  input(""+playerName+"'s ship exits hyperspace as a planet begins to enter "+playerPosPronoun+" view..")
   input("Through the surrounding windows, a brilliant white horizon blossoms upward.")
-  input("As your ship flies ever closer to the planet, you adjust velocity for entry.")
-  input("You've been travelling your whole life, but now is the time to find a place to stay.")
-  input("This will be your first visit to Domaterum... and hopefully, you'll be able to settle here.")
-  input("Your ship lands and docks just outside of a bustling city. You prepare to leave, unsure of what the future may hold.")
+  input("As "+playerPosPronoun+" ship flies ever closer to the planet, "+playerPronoun+" adjusts velocity for entry.")
+  input("They've been travelling their whole life, but now is the time to find a place to stay.")
+  input("This will be "+playerPosPronoun+" first visit to Domaterum... and hopefully, "+playerPronoun+"'ll be able to settle here.")
+  input("The ship lands and docks just outside of a bustling city. "+playerName+" prepares to leave, unsure of what the future may hold.")
 
 
   
