@@ -135,7 +135,7 @@ def map():
     print("ship")
   core()
     
-def inventoryInfo():
+def inventory():
   print("You currently own:")
   print("Ship manual")
   print("Map")
@@ -172,7 +172,11 @@ def locationInfo():
   else:
     input("Location not found.")
     info()
-    
+
+def inventoryInfo():
+  
+
+          
 #Plot events
 def cityFirstTime():
   input("As you walk into the city, you are flooded with advertisements and crowds.")
