@@ -62,7 +62,7 @@ def initialize():
   input(""+playerName+"'s ship exits hyperspace as a planet begins to enter "+playerPosPronoun+" view.")
   input("Through the surrounding windows, a brilliant white horizon blossoms upward.")
   input("As "+playerPosPronoun+" ship flies ever closer to the planet, "+playerPronoun+" adjusts velocity for entry.")
-  input("They've been travelling their whole life, but now is the time to find a place to stay.")
+  input(playerPronoun+"'s been travelling "+playerPosPronoun+" whole life, but now is the time to find a place to stay.")
   input("This will be "+playerPosPronoun+" first visit to Domaterum... hopefully, "+playerPronoun+"'ll be able to settle here.")
   input("The ship lands and docks just outside of a bustling city. "+playerName+" prepares to leave, unsure of what the future may hold.")
 
@@ -72,15 +72,20 @@ def initialize():
 def core():
   if location == "the city" and cityFirstTimeCheck == True:
     cityFirstTime()
-  response = input("You are currently at "+location+". What would you like to do? ")
-  if response.lower() == "ship":
+  response = input("You are currently at"+location+". What would you like to do? ")
+  if response.lower() == "ship" and location == playerName+"'s ship":
     ship()
-  elif response.lower() == "move to dock" and location == "your ship":
+  elif response.lower() == "move to dock" and (location == "your ship" or location == "[City name]'s streets"):
     move("docking bay 825")
   elif response.lower() == "move to ship" and location == "docking bay 825":
-    move("your ship")
-  elif response.lower() == "move to streets" and location == "docking bay 825":
-    move("the streets")
+    move(playerName+"'s ship")
+  elif response.lower() == "move to streets" and (location == "docking bay 825" or location == "the apartment lobby"):
+    move("[City name]'s streets")
+  elif response.lower() == "move to apartments" and (location == "[City name]'s streets" or location == playerName+"'s apartment"):
+    move("the apartment lobby")
+  elif response.lower() == "move to aparment" and location == "the apartment lobby":
+    move(playerName+"'s apartment")
+  
   elif response.lower() == "commands":
     commands()
   elif response.lower() == "use map":
@@ -131,10 +136,16 @@ def info():
     planetInfo()
 def map():
   print("Here are the places you can move to:")
-  if location == "your ship": 
-    print("city")
-  if location == "the city":
+  if location == "docking bay 825":
     print("ship")
+  elif location == ("your ship" or "[City name]'s streets"): 
+    print("dock")
+  elif location == ("docking bay 825" or "the apartment lobby"):
+    print("streets")
+  elif location == ("City name]'s streets" or playerName+"'s apartment"):
+    print("apartments")
+  elif location == "the apartment lobby":
+    print("apartment")
   core()
     
 def inventory():
