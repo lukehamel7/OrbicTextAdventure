@@ -31,8 +31,8 @@ def initialize():
   location = "your ship" #The 'location' string will be pretty important. It's also used in main(), so all location names should look decent when it says "You are currently at [location]". That's why I called it "your ship" and not just "ship".
   global planet
   planet = "domaterum"
-  global cityFirstTimeCheck
-  cityFirstTimeCheck = True 
+  global streetsFirstTimeCheck
+  streetsFirstTimeCheck = True 
     
   while True:
     global playerName
@@ -70,8 +70,8 @@ def initialize():
   
 #Basic Functions
 def core():
-  if location == "the city" and cityFirstTimeCheck == True:
-    cityFirstTime()
+  if location == "[City name]'s streets" and streetsFirstTimeCheck == True:
+    streetsFirstTime()
   response = input("You are currently at"+location+". What would you like to do? ")
   if response.lower() == "ship" and location == playerName+"'s ship":
     ship()
@@ -191,7 +191,7 @@ def inventoryInfo():
 
           
 #Plot events
-def cityFirstTime():
+def streetsFirstTime():
   input("As you walk into the city, you are flooded with advertisements and crowds.")
   input("This planet was established pretty recently, but even since then immense progress has been made.")
   input("You notice the variety of citizens, a mess of colors and compositions.")
@@ -199,8 +199,8 @@ def cityFirstTime():
   input("Except, in the midst of all the movement, you notice one stationary person.")
   input("A slender man, with green, scaly skin and deeply sunken cheeks, stands in front of a building.")
   
-  global cityFirstTimeCheck
-  cityFirstTimeCheck = False
+  global streetsFirstTimeCheck
+  streetsFirstTimeCheck = False
   core()
   
 initialize()
