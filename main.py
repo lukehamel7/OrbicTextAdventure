@@ -75,10 +75,12 @@ def core():
   response = input("You are currently at "+location+". What would you like to do? ")
   if response.lower() == "ship":
     ship()
-  elif response.lower() == "move to city" and location == "your ship":
-    move("the city")
-  elif response.lower() == "move to ship" and location == "the city":
+  elif response.lower() == "move to dock" and location == "your ship":
+    move("docking bay 825")
+  elif response.lower() == "move to ship" and location == "docking bay 825":
     move("your ship")
+  elif response.lower() == "move to streets" and location == "docking bay 825":
+    move("the streets")
   elif response.lower() == "commands":
     commands()
   elif response.lower() == "use map":
@@ -125,7 +127,7 @@ def info():
     locationInfo()
   if response.lower() == "inventory"
     inventoryInfo()
-  if response.lower() == planet info
+  if response.lower() == "planet info"
     planetInfo()
 def map():
   print("Here are the places you can move to:")
