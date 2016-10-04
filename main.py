@@ -126,6 +126,7 @@ def info():
   print("<<< Locations >>>")
   print("<<< Inventory >>>")
   print("<<<  Planets  >>>")
+  response = input("What should I get info on?")
   if response.lower() == "locations":
     locationInfo()
   if response.lower() == "inventory":
