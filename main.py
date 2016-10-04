@@ -83,8 +83,8 @@ def core():
   elif response.lower() == "move to streets" and (location == "docking bay 825" or location == "the apartment lobby"):
     move("[City name]'s streets")
   elif response.lower() == "move to apartments" and (location == "[City name]'s streets" or location == playerName+"'s apartment"):
-    move("the apartment lobby")
-  elif response.lower() == "move to aparment" and location == "the apartment lobby":
+    move("the apartment lobby")sh
+  elif response.lower() == "move to apartment" and location == "the apartment lobby":
     move(playerName+"'s apartment")
   
   elif response.lower() == "commands":
@@ -97,12 +97,12 @@ def core():
     core()    
 def commands():
   print()
-  print("Use 'quit' to exit the game.")
-  print("Use 'move to [location]' to go somewhere.")
-  print("Use 'map' to find locations to move to.")
-  print("When at your ship, use 'ship' to access the ship computer. Or, use it to exit the ship computer.")
-  print("When using your ship computer, use 'leave' to fly to another planet.")
-  print("Or use 'info' to find information.")
+  print("Submit 'quit' to exit the game.")
+  print("Submit 'move to [location]' to go somewhere.")
+  print("Submit 'use map' to find locations to move to.")
+  print("When at your ship, submit 'ship' to access the ship computer. Or, submit it to exit the ship computer.")
+  print("When using your ship computer, submit 'leave' to fly to another planet.")
+  print("Or submit 'info' to find information.")
   print()
   core()
 def ship():
@@ -145,13 +145,13 @@ def map():
   input("Here are the places you can move to:")
   if location == "docking bay 825":
     input("ship")
-  elif location == playerName+"'s ship" or location == "[City name]'s streets": 
+  if location == playerName+"'s ship" or location == "[City name]'s streets": 
     input("dock")
-  elif location == "docking bay 825" or location == "the apartment lobby":
+  if location == "docking bay 825" or location == "the apartment lobby":
     input("streets")
-  elif location == "City name]'s streets" or location == playerName+"'s apartment":
+  if location == "[City name]'s streets" or location == playerName+"'s apartment":
     input("apartments")
-  elif location == "the apartment lobby":
+  if location == "the apartment lobby":
     input("apartment")
   print()
   core()
