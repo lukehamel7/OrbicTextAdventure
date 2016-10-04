@@ -139,11 +139,11 @@ def map():
   print("Here are the places you can move to:")
   if location == "docking bay 825":
     print("ship")
-  elif location == ("your ship" or "[City name]'s streets"): 
+  elif location == "your ship" or location == "[City name]'s streets": 
     print("dock")
-  elif location == ("docking bay 825" or "the apartment lobby"):
+  elif location == "docking bay 825" or location == "the apartment lobby":
     print("streets")
-  elif location == ("City name]'s streets" or playerName+"'s apartment"):
+  elif location == "City name]'s streets" or location == playerName+"'s apartment":
     print("apartments")
   elif location == "the apartment lobby":
     print("apartment")
