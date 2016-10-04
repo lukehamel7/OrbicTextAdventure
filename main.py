@@ -27,13 +27,6 @@ def tutorial():
 tutorial() #The earlier code was just defining the tutorial, but now we're actually running it. If this were a one time thing we wouldn't bother with a function, but now the code can run any time it's called.
 def initialize():
   import sys
-  global location
-  location = "your ship" #The 'location' string will be pretty important. It's also used in main(), so all location names should look decent when it says "You are currently at [location]". That's why I called it "your ship" and not just "ship".
-  global planet
-  planet = "domaterum"
-  global streetsFirstTimeCheck
-  streetsFirstTimeCheck = True 
-    
   while True:
     global playerName
     playerName = input("What is the name of the main character? ")
@@ -58,6 +51,14 @@ def initialize():
       playerPronoun = "she"
       playerPosPronoun = "her"
       break
+  global location
+  location = playerName+"'s ship" #The 'location' string will be pretty important. It's also used in main(), so all location names should look decent when it says "You are currently at [location]". That's why I called it "your ship" and not just "ship".
+  global planet
+  planet = "domaterum"
+  global streetsFirstTimeCheck
+  streetsFirstTimeCheck = True 
+    
+  
       
   input(""+playerName+"'s ship exits hyperspace as a planet begins to enter "+playerPosPronoun+" view.")
   input("Through the surrounding windows, a brilliant white horizon blossoms upward.")
@@ -72,7 +73,7 @@ def initialize():
 def core():
   if location == "[City name]'s streets" and streetsFirstTimeCheck == True:
     streetsFirstTime()
-  response = input("You are currently at"+location+". What would you like to do? ")
+  response = input(playerName+" is currently at"+location+". What would you like to do? ")
   if response.lower() == "ship" and location == playerName+"'s ship":
     ship()
   elif response.lower() == "move to dock" and (location == "your ship" or location == "[City name]'s streets"):
