@@ -76,7 +76,7 @@ def core():
   response = input(playerName+" is currently at"+location+". What would you like to do? ")
   if response.lower() == "ship" and location == playerName+"'s ship":
     ship()
-  elif response.lower() == "move to dock" and (location == "your ship" or location == "[City name]'s streets"):
+  elif response.lower() == "move to dock" and (location == playerName+"'s ship" or location == "[City name]'s streets"):
     move("docking bay 825")
   elif response.lower() == "move to ship" and location == "docking bay 825":
     move(playerName+"'s ship")
@@ -139,7 +139,7 @@ def map():
   print("Here are the places you can move to:")
   if location == "docking bay 825":
     print("ship")
-  elif location == "your ship" or location == "[City name]'s streets": 
+  elif location == playerName+"'s ship" or location == "[City name]'s streets": 
     print("dock")
   elif location == "docking bay 825" or location == "the apartment lobby":
     print("streets")
