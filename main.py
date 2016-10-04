@@ -129,11 +129,11 @@ def info():
   print("<<< Location Info >>>")
   print("<<<  Inventory   >>>")
   print("<<< Planet Info  >>>")
-  if response.lower() == "location info"
+  if response.lower() == "location info":
     locationInfo()
-  if response.lower() == "inventory"
+  if response.lower() == "inventory":
     inventoryInfo()
-  if response.lower() == "planet info"
+  if response.lower() == "planet info":
     planetInfo()
 def map():
   print("Here are the places you can move to:")
@@ -174,11 +174,11 @@ def planetInfo():
   core()
   
 def locationInfo():
-  response = input("Get info on which location?"
+  response = input("Get info on which location?")
   if response.lower() == "ship":
-    input("This ship is a GX-1600 medium transport shuttle, designed for long distance travel."
-    input("It contains 2 separate sleeping areas with a total of 8 beds."
-    input("While not created for combat, it features 2 PLO-4 laser cannons."
+    input("This ship is a GX-1600 medium transport shuttle, designed for long distance travel.")
+    input("It contains 2 separate sleeping areas with a total of 8 beds.")
+    input("While not created for combat, it features 2 PLO-4 laser cannons.")
   elif response.lower() == "dock":
     input("Dock 825 of [City name] is just one of many medium-sized docks in the area.")
     input("These docks are rented ahead of time, and most citizens find them to be affordable and accessible.")
@@ -188,7 +188,7 @@ def locationInfo():
     info()
 
 def inventoryInfo():
-  
+  print("Haha, let's do this later")
 
           
 #Plot events
