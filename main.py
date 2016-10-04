@@ -73,7 +73,7 @@ def initialize():
 def core():
   if location == "[City name]'s streets" and streetsFirstTimeCheck == True:
     streetsFirstTime()
-  response = input(playerName+" is currently at"+location+". What would you like to do? ")
+  response = input(playerName+" is currently at "+location+". What would you like to do? ")
   if response.lower() == "ship" and location == playerName+"'s ship":
     ship()
   elif response.lower() == "move to dock" and (location == playerName+"'s ship" or location == "[City name]'s streets"):
@@ -113,8 +113,6 @@ def ship():
     leaveShip()
   elif response.lower() == "ship":
     core()
-  elif response.lower() == "info":
-    info()
   else:
     ship()
     
@@ -126,27 +124,28 @@ def move(locationToMove):
 
 def info():
   print("Information Library:")
-  print("<<< Location Info >>>")
-  print("<<<  Inventory   >>>")
-  print("<<< Planet Info  >>>")
-  if response.lower() == "location info":
+  print("<<< Locations >>>")
+  print("<<< Inventory >>>")
+  print("<<<  Planets  >>>")
+  if response.lower() == "locations":
     locationInfo()
   if response.lower() == "inventory":
     inventoryInfo()
-  if response.lower() == "planet info":
+  if response.lower() == "planets":
     planetInfo()
 def map():
-  print("Here are the places you can move to:")
+  input("Here are the places you can move to:")
   if location == "docking bay 825":
-    print("ship")
+    input("ship")
   elif location == playerName+"'s ship" or location == "[City name]'s streets": 
-    print("dock")
+    input("dock")
   elif location == "docking bay 825" or location == "the apartment lobby":
-    print("streets")
+    input("streets")
   elif location == "City name]'s streets" or location == playerName+"'s apartment":
-    print("apartments")
+    input("apartments")
   elif location == "the apartment lobby":
-    print("apartment")
+    input("apartment")
+  print()
   core()
     
 def inventory():
@@ -158,11 +157,6 @@ def inventory():
   
 def quit():
   print("Okay.")
-def info():
-  response = input("Get info on what?")
-  if response == "planet":
-    planetInfo()
-  core()
    
 def planetInfo():
   print("Planet: "+planet)
