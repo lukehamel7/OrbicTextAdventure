@@ -31,7 +31,6 @@ def initialize():
     global playerName
     playerName = input("What is the name of the main character? ")
     response = input("Is "+playerName+" the name you want?")
-    print(response)
     if response.lower() == "yes":
       break
    
