@@ -65,6 +65,7 @@ def initialize():
   input(playerPronoun+"'s been travelling "+playerPosPronoun+" whole life, but now is the time to find a place to stay.")
   input("This will be "+playerPosPronoun+" first visit to Domaterum... hopefully, "+playerPronoun+"'ll be able to settle here.")
   input("The ship lands and docks just outside of a bustling city. "+playerName+" prepares to leave, unsure of what the future may hold.")
+  print()
 
   
   
@@ -95,14 +96,17 @@ def core():
   else:
     core()    
 def commands():
+  print()
   print("Use 'quit' to exit the game.")
   print("Use 'move to [location]' to go somewhere.")
   print("Use 'map' to find locations to move to.")
   print("When at your ship, use 'ship' to access the ship computer. Or, use it to exit the ship computer.")
   print("When using your ship computer, use 'leave' to fly to another planet.")
   print("Or use 'info' to find information.")
+  print()
   core()
 def ship():
+  print()
   print("<<Welcome to OorbOS v3.04. Ship #3348 - The Ravager>>")
   print("   ")
   response = input("What would you like to do, "+playerName+"?")
@@ -122,6 +126,7 @@ def move(locationToMove):
   core()
 
 def info():
+  print()
   print("Information Library:")
   print("<<< Locations >>>")
   print("<<< Inventory >>>")
@@ -133,6 +138,9 @@ def info():
     inventoryInfo()
   if response.lower() == "planets":
     planetInfo()
+  print()
+  core()
+  
 def map():
   input("Here are the places you can move to:")
   if location == "docking bay 825":
@@ -149,25 +157,28 @@ def map():
   core()
     
 def inventory():
-  print("You currently own:")
-  print("Ship manual")
-  print("Map")
-  input()
+  print()
+  input("You currently own:")
+  input("Map")
+  print()
   core()
   
 def quit():
   print("Okay.")
    
 def planetInfo():
+  print()
   print("Planet: "+planet)
   if planet == "domaterum":
     print("This planet was discovered fairly recently, and has since had a major influx of Acrylite refugees after the destruction of their planet.")
     print("[INSERT ORBIC'S STORY PLOT HERE]") 
     print("Since then, the capital of [CITY NAME] has flourished as well as other settlements. Much of the planet remains in a more natural state.")
     print("Economists predict that Domaterum will become a Class-4 planet in 30 years or less.")
+  print()
   core()
   
 def locationInfo():
+  print()
   response = input("Get info on which location?")
   if response.lower() == "ship":
     input("This ship is a GX-1600 medium transport shuttle, designed for long distance travel.")
@@ -180,6 +191,7 @@ def locationInfo():
   else:
     input("Location not found.")
     info()
+  print()
 
 def inventoryInfo():
   print("Haha, let's do this later")
@@ -187,12 +199,14 @@ def inventoryInfo():
           
 #Plot events
 def streetsFirstTime():
+  print()
   input("As you walk into the city, you are flooded with advertisements and crowds.")
   input("This planet was established pretty recently, but even since then immense progress has been made.")
   input("You notice the variety of citizens, a mess of colors and compositions.")
   input("Everyone here walks as if they're late, and you feel somewhat out of place.")
   input("Except, in the midst of all the movement, you notice one stationary person.")
   input("A slender man, with green, scaly skin and deeply sunken cheeks, stands in front of a building.")
+  print()
   
   global streetsFirstTimeCheck
   streetsFirstTimeCheck = False
