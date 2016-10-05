@@ -7,9 +7,9 @@ print("  |   \/   |       \       \  |   I            Luke Hamel & Connor Jordan
 print("  |        |        \_     |  |    `-`\      ")
 print("  \________/___/\____/_____/___\_____,i'_     ___       ____  ____    ___ ")
 print("             \    ;   \     ___ /`   __  \   /    \    /     `.\   \/   /    ")
-print("              |   |    |   [   \|   /  `_/  /      \  |    .-./  \     /    ") 
-print("              |   |    |    `-_ |  |  ____ /    .   \ |   |       /   /  ") 
-print("              |   \   /|    /`  |  | |__  |    __    \|   I      /   /     ") 
+print("              |   |    |   [   \|   /  `_/  /      \  |    .-./ \      /    ") 
+print("              |   |    |    `-_ |  |  ____ /    .   \ |   |      /    /  ") 
+print("              |   \   /|    /`  |  | |__  |    __    \|   I     /   /     ") 
 print("              |    `-` |   [___/|   ` `   |  .'  '.   \   `-`\_/   /      ")
 print("              /________/_________\_____/\_|__\    /____\___________\       ")
 print("   ")
@@ -51,7 +51,7 @@ def initialize():
       playerPosPronoun = "her"
       break
   global location
-  location = playerName+"'s ship" #The 'location' string will be pretty important. It's also used in main(), so all location names should look decent when it says "You are currently at [location]". That's why I called it "your ship" and not just "ship".
+  location = +playerName+"'s ship" #The 'location' string will be pretty important. It's also used in main(), so all location names should look decent when it says "You are currently at [location]". That's why I called it "your ship" and not just "ship".
   global planet
   planet = "domaterum"
   global streetsFirstTimeCheck
