@@ -55,7 +55,9 @@ def initialize():
   global planet
   planet = "domaterum"
   global streetsFirstTimeCheck
-  streetsFirstTimeCheck = True 
+  streetsFirstTimeCheck = True
+  global apartmentsFirstTimeCheck
+  apartmentsFirstTimeCheck = True
     
   
       
@@ -73,6 +75,8 @@ def initialize():
 def core():
   if location == "[City name]'s streets" and streetsFirstTimeCheck == True:
     streetsFirstTime()
+  if location == "the apartment lobby" and apartmentsFirstTimeCheck == True:
+    apartmentsFirstTime()
   response = input(playerName+" is currently at "+location+". What would you like to do? ")
   if response.lower() == "ship" and location == playerName+"'s ship":
     ship()
@@ -83,7 +87,7 @@ def core():
   elif response.lower() == "move to streets" and (location == "docking bay 825" or location == "the apartment lobby"):
     move("[City name]'s streets")
   elif response.lower() == "move to apartments" and (location == "[City name]'s streets" or location == playerName+"'s apartment"):
-    move("the apartment lobby")sh
+    move("the apartment lobby")
   elif response.lower() == "move to apartment" and location == "the apartment lobby":
     move(playerName+"'s apartment")
   
@@ -200,17 +204,31 @@ def inventoryInfo():
 #Plot events
 def streetsFirstTime():
   print()
-  input("As you walk into the city, you are flooded with advertisements and crowds.")
+  input("As "+playerName+" walks into the city, "+playerPronoun+" is flooded with advertisements and crowds.")
   input("This planet was established pretty recently, but even since then immense progress has been made.")
-  input("You notice the variety of citizens, a mess of colors and compositions.")
-  input("Everyone here walks as if they're late, and you feel somewhat out of place.")
-  input("Except, in the midst of all the movement, you notice one stationary person.")
+  input(playerPronoun+" notices the variety of citizens, a mess of colors and compositions.")
+  input("Everyone here walks as if they're late, and "+playerName+" feels somewhat out of place.")
+  input("Except, in the midst of all the movement, "+playerPronoun+" notices one stationary person.")
   input("A slender man, with green, scaly skin and deeply sunken cheeks, stands in front of a building.")
+  input("The man notices "+playerName+" and walks away, but not before initiating a call on his communicator.")
+  input(playerName+" remembers that "+playerPronoun+" needs to rent an apartment and continues.") 
   print()
-  
   global streetsFirstTimeCheck
   streetsFirstTimeCheck = False
   core()
+  
+def apartmentsFirstTime():
+  print()
+  input(playerName+" enters the apartment building "+playerPronoun+" had previously read about.")
+  input("Behind the counter sits a friendly-looking, vaguely humanoid young woman.")
+  input("Should "+playerName+"..."
+  print("Politely ask to access the apartment "+playerPronoun+" rented. (1)")
+  print("Demand the apartment in a vaguely menacing threat. (2)")
+  print("Attempt to seduce the young woman with faked self-confidence. (3)")
+  response = input("? ")
+  if response.lower() == "1":
+    input("The woman smiles and 
+        
   
 initialize()
 core()
