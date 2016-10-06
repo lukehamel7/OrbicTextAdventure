@@ -15,12 +15,12 @@ print("              /________/_________\_____/\_|__\    /____\___________\     
 print("   ")
 def tutorial():
   response = input("Would you like to play the tutorial? ")
-  if response.lower() == "yes":
+  if response.lower() == "yes" or response.lower() == "y":
     input("To advance past statements or events (.), simply press enter. For questions (?), type a response first.")
     input("For multiple choice questions, only type the corresponding number.")
     input("For 'yes or no' questions, type 'yes' or 'no'.")
     input("Will add more to this when there are actual game mechanics to describe.")
-  elif response.lower() == "no": #Else if, works pretty much the same as def and if. But, you know. Else if. 
+  elif response.lower() == "no" or response.lower() == "n": #Else if, works pretty much the same as def and if. But, you know. Else if. 
     print("Type 'Tutorial' at any time to view the tutorial, or 'Commands' for a command list.")
   else:
     tutorial()
@@ -31,7 +31,7 @@ def initialize():
     global playerName
     playerName = input("What is the name of the main character? ")
     response = input("Is "+playerName+" the name you want?")
-    if response.lower() == "yes":
+    if response.lower() == "yes" or response.lower() == "y":
       break
    
   global playerGender
