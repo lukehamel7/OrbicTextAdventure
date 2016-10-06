@@ -225,15 +225,27 @@ def apartmentsFirstTime():
   print("(1) Politely ask to access the apartment "+playerPronoun+" rented.")
   print("(2) Demand the apartment in a vaguely menacing threat.")
   print("(3) Attempt to seduce the young woman with faked self-confidence.")
+  global apartmentWomanRelation
+  while True:
   response = input("? ")
-  if response.lower() == "1":
-    input("The woman smiles and hands "+playerName+" the key to the apartment.")
-    input("She tells "+playerPosPronoun+" the room number, and demonstrates how the key should be scanned.")
-  if response.lower() == "2":
-    input("The woman glares and begrudgingly gives "+playerName+" the key to the apartment.")
-    input("She tells "playerPosPronoun+" where to find the room number.")
-  if respone.lower() == "3":
-    input("The woman looks concerned
+    if response.lower() == "1":
+      input("The woman smiles and hands "+playerName+" the key to the apartment.")
+      input("She tells "+playerPosPronoun+" the room number, and demonstrates how the key should be scanned.")
+      apartmentWomanRelation = 1
+      break
+    if response.lower() == "2":
+      input("The woman glares and begrudgingly gives "+playerName+" the key to the apartment.")
+      input("She tells "playerPosPronoun+" where to find the room number.")
+      aparmentWomanRelation = -1
+      break
+    if respone.lower() == "3":
+      input("She looks concerned.)
+      input("She gives "+playerName+" the key and quietly goes back to work.")
+      apartmentWomanRelation = 0
+      break
+  core()
+  
+     
         
   
 initialize()
