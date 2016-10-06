@@ -231,7 +231,9 @@ def apartmentsFirstTime():
     input("She tells "+playerPosPronoun+" the room number, and demonstrates how the key should be scanned.")
   if response.lower() == "2":
     input("The woman glares and begrudgingly gives "+playerName+" the key to the apartment.")
-    input("She tells "
+    input("She tells "playerPosPronoun+" where to find the room number.")
+  if respone.lower() == "3":
+    input("The woman looks concerned
         
   
 initialize()
