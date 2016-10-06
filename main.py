@@ -222,12 +222,16 @@ def apartmentsFirstTime():
   input(playerName+" enters the apartment building "+playerPronoun+" had previously read about.")
   input("Behind the counter sits a friendly-looking, vaguely humanoid young woman.")
   input("Should "+playerName+"..."
-  print("Politely ask to access the apartment "+playerPronoun+" rented. (1)")
-  print("Demand the apartment in a vaguely menacing threat. (2)")
-  print("Attempt to seduce the young woman with faked self-confidence. (3)")
+  print("(1) Politely ask to access the apartment "+playerPronoun+" rented.")
+  print("(2) Demand the apartment in a vaguely menacing threat.")
+  print("(3) Attempt to seduce the young woman with faked self-confidence.")
   response = input("? ")
   if response.lower() == "1":
-    input("The woman smiles and 
+    input("The woman smiles and hands "+playerName+" the key to the apartment.")
+    input("She tells "+playerPosPronoun+" the room number, and demonstrates how the key should be scanned.")
+  if response.lower() == "2":
+    input("The woman glares and begrudgingly gives "+playerName+" the key to the apartment.")
+    input("She tells "
         
   
 initialize()
