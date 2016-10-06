@@ -238,7 +238,7 @@ def apartmentsFirstTime():
       input("She tells "playerPosPronoun+" where to find the room number.")
       aparmentWomanRelation = -1
       break
-    if respone.lower() == "3":
+    if response.lower() == "3":
       input("She looks concerned.)
       input("She gives "+playerName+" the key and quietly goes back to work.")
       apartmentWomanRelation = 0
