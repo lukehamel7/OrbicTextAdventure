@@ -37,6 +37,7 @@ def initialize():
   global playerGender
   global playerPronoun
   global playerPosPronoun
+  global playerObjectPronoun
   
   while True:
     response = input("Is the main character male (1) or female (2)?")
@@ -44,11 +45,13 @@ def initialize():
       playerGender = 0
       playerPronoun = "he"
       playerPosPronoun = "his"
+      playerObjectPronoun = "him"
       break
     elif response.lower() == "2":
       playerGender = 1
       playerPronoun = "she"
       playerPosPronoun = "her"
+      playerObjectPronoun = "her"
       break
   global location
   location = playerName+"'s ship" #The 'location' string will be pretty important. It's also used in main(), so all location names should look decent when it says "You are currently at [location]". That's why I called it "your ship" and not just "ship".
@@ -231,13 +234,13 @@ def apartmentsFirstTime():
     response = input("? ")
     if response.lower() == "1":
       input("The woman smiles and hands "+playerName+" the key to the apartment.")
-      input("She tells "+playerPosPronoun+" the room number, and demonstrates how the key should be scanned.")
+      input("She tells "+playerObjectPronoun+" the room number, and demonstrates how the key should be scanned.")
       apartmentWomanRelation = 1
       apartmentsFirstTimeCheck = False
       break
     if response.lower() == "2":
       input("The woman glares and begrudgingly gives "+playerName+" the key to the apartment.")
-      input("She tells "+playerPosPronoun+" where to find the room number.")
+      input("She tells "+playerObjectPronoun+" where to find the room number.")
       apartmentWomanRelation = -1
       apartmentsFirstTimeCheck = False
       break
@@ -248,7 +251,7 @@ def apartmentsFirstTime():
       apartmentsFirstTimeCheck = False
       break
   
-  
+def dockFirstTime:
      
         
   
