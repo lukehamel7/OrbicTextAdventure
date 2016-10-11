@@ -262,6 +262,16 @@ def dockFirstTime():
   global dockFirstTimeCheck
   dockFirstTimeCheck = False
         
-  
+def apartmentFirstTime():
+  input(playerName+" enters "+playerPosPronoun+" apartment.")
+  input("With nothing to do, "+playerPronoun+" decides to relax a bit and watch a holoprojection.")
+  while True:
+    input("Should "+playerPronoun+" watch...")
+    print("(1) URC Galactic News"
+    print("(2) Pimp my Ship"
+    print("(3) 412,361 Larvae and Counting")
+    response = input("? ")
+    if response == "1":
+      input("
 initialize()
 core()
