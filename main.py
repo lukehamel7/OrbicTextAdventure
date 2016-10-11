@@ -1,3 +1,18 @@
+#Orbic Legacy 2016 Luke Hamel & Connor Jordan
+print("   __________________________________    ")
+print("  /        \       \     \     /     `.  ")
+print("  |        |       |     /    |    .-./             A Text Adventure   ")
+print("  |   /\   |       /      \   |   |                        by   ")
+print("  |   \/   |       \       \  |   I            Luke Hamel & Connor Jordan")
+print("  |        |        \_     |  |    `-`\      ")
+print("  \________/___/\____/_____/___\_____,i'_     ___       ____  ____    ___ ")
+print("             \    ;   \     ___ /`   __  \   /    \    /     `.\   \/   /    ")
+print("              |   |    |   [   \|   /  `_/  /      \  |    .-./ \      /    ") 
+print("              |   |    |    `-_ |  |  ____ /    .   \ |   |      /    /  ") 
+print("              |   \   /|    /`  |  | |__  |    __    \|   I     /   /     ") 
+print("              |    `-` |   [___/|   ` `   |  .'  '.   \   `-`\_/   /      ")
+print("              /________/_________\_____/\_|__\    /____\___________\       ")
+print("   ")
 def tutorial():
   response = input("Would you like to play the tutorial? ")
   if response.lower() == "yes" or response.lower() == "y":
