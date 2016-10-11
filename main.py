@@ -61,6 +61,8 @@ def initialize():
   streetsFirstTimeCheck = True
   global apartmentsFirstTimeCheck
   apartmentsFirstTimeCheck = True
+  global dockFirstTimeCheck
+  dockFirstTimeCheck = True
     
   
       
@@ -76,6 +78,8 @@ def initialize():
   
 #Basic Functions
 def core():
+  if location == "docking bay 825" and dockFirstTimeCheck == True:
+    dockFirstTime()
   if location == "[City name]'s streets" and streetsFirstTimeCheck == True:
     streetsFirstTime()
   if location == "the apartment lobby" and apartmentsFirstTimeCheck == True:
@@ -212,7 +216,7 @@ def streetsFirstTime():
   input(playerPronoun+" notices the variety of citizens, a mess of colors and compositions.")
   input("Everyone here walks as if they're late, and "+playerName+" feels somewhat out of place.")
   input("Except, in the midst of all the movement, "+playerPronoun+" notices one stationary person.")
-  input("A slender man, with green, scaly skin and deeply sunken cheeks, stands in front of a building.")
+  input("A thin man, with green, scaly skin and deeply sunken cheeks, stands in front of a building.")
   input("The man notices "+playerName+" and walks away, but not before initiating a call on his communicator.")
   input(playerName+" remembers that "+playerPronoun+" needs to rent an apartment and continues.") 
   print()
@@ -226,10 +230,10 @@ def apartmentsFirstTime():
   input("Behind the counter sits a friendly-looking, vaguely humanoid young woman.")
   input("Should "+playerName+"...")
   print("(1) Politely ask to access the apartment "+playerPronoun+" rented.")
-  print("(2) Demand the apartment in a vaguely menacing threat.")
+  print("(2) Demand the apartment in a somewhat menacing threat.")
   print("(3) Attempt to seduce the young woman with faked self-confidence.")
   global apartmentWomanRelation
-  global aparmentsFirstTimeCheck
+  global apartmentsFirstTimeCheck
   while True:
     response = input("? ")
     if response.lower() == "1":
@@ -251,8 +255,12 @@ def apartmentsFirstTime():
       apartmentsFirstTimeCheck = False
       break
   
-def dockFirstTime:
-     
+def dockFirstTime():
+  input(playerName+" steps onto the docking bay and surveys the area.")
+  input("The bays are stacked on top of each other, creating a huge wall with a grid of holes.")
+  input(playerName+" remembers the apartment that "+playerPronoun+" rented, and decides to find it.")
+  global dockFirstTimeCheck
+  dockFirstTimeCheck = False
         
   
 initialize()
