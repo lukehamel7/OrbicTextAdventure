@@ -1,18 +1,3 @@
-#Orbic Legacy 2016 Luke Hamel & Connor Jordan
-print("   __________________________________    ")
-print("  /        \       \     \     /     `.  ")
-print("  |        |       |     /    |    .-./             A Text Adventure   ")
-print("  |   /\   |       /      \   |   |                        by   ")
-print("  |   \/   |       \       \  |   I            Luke Hamel & Connor Jordan")
-print("  |        |        \_     |  |    `-`\      ")
-print("  \________/___/\____/_____/___\_____,i'_     ___       ____  ____    ___ ")
-print("             \    ;   \     ___ /`   __  \   /    \    /     `.\   \/   /    ")
-print("              |   |    |   [   \|   /  `_/  /      \  |    .-./ \      /    ") 
-print("              |   |    |    `-_ |  |  ____ /    .   \ |   |      /    /  ") 
-print("              |   \   /|    /`  |  | |__  |    __    \|   I     /   /     ") 
-print("              |    `-` |   [___/|   ` `   |  .'  '.   \   `-`\_/   /      ")
-print("              /________/_________\_____/\_|__\    /____\___________\       ")
-print("   ")
 def tutorial():
   response = input("Would you like to play the tutorial? ")
   if response.lower() == "yes" or response.lower() == "y":
@@ -38,6 +23,7 @@ def initialize():
   global playerPronoun
   global playerPosPronoun
   global playerObjectPronoun
+  global playerCapitalPronoun
   
   while True:
     response = input("Is the main character male (1) or female (2)?")
@@ -46,12 +32,14 @@ def initialize():
       playerPronoun = "he"
       playerPosPronoun = "his"
       playerObjectPronoun = "him"
+      playerCapitalPronoun = "He"
       break
     elif response.lower() == "2":
       playerGender = 1
       playerPronoun = "she"
       playerPosPronoun = "her"
       playerObjectPronoun = "her"
+      playerCapitalPronoun = "She"
       break
   global location
   location = playerName+"'s ship" #The 'location' string will be pretty important. It's also used in main(), so all location names should look decent when it says "You are currently at [location]". That's why I called it "your ship" and not just "ship".
@@ -63,13 +51,15 @@ def initialize():
   apartmentsFirstTimeCheck = True
   global dockFirstTimeCheck
   dockFirstTimeCheck = True
+  global apartmentFirstTimeCheck
+  apartmentFirstTimeCheck = True
     
   
       
   input(""+playerName+"'s ship exits hyperspace as a planet begins to enter "+playerPosPronoun+" view.")
   input("Through the surrounding windows, a brilliant white horizon blossoms upward.")
   input("As "+playerPosPronoun+" ship flies ever closer to the planet, "+playerPronoun+" adjusts velocity for entry.")
-  input(playerPronoun+"'s been travelling "+playerPosPronoun+" whole life, but now is the time to find a place to stay.")
+  input(playerCapitalPronoun+"'s been travelling "+playerPosPronoun+" whole life, but now is the time to find a place to stay.")
   input("This will be "+playerPosPronoun+" first visit to Domaterum... hopefully, "+playerPronoun+"'ll be able to settle here.")
   input("The ship lands and docks just outside of a bustling city. "+playerName+" prepares to leave, unsure of what the future may hold.")
   print()
@@ -84,6 +74,8 @@ def core():
     streetsFirstTime()
   if location == "the apartment lobby" and apartmentsFirstTimeCheck == True:
     apartmentsFirstTime()
+  if location == playerName+"'s apartment" and apartmentFirstTimeCheck == True:
+  	apartmentFirstTime()
   response = input(playerName+" is currently at "+location+". What would you like to do? ")
   if response.lower() == "ship" and location == playerName+"'s ship":
     ship()
@@ -213,7 +205,7 @@ def streetsFirstTime():
   print()
   input("As "+playerName+" walks into the city, "+playerPronoun+" is flooded with advertisements and crowds.")
   input("This planet was established pretty recently, but even since then immense progress has been made.")
-  input(playerPronoun+" notices the variety of citizens, a mess of colors and compositions.")
+  input(playerCapitalPronoun+" notices the variety of citizens, a mess of colors and compositions.")
   input("Everyone here walks as if they're late, and "+playerName+" feels somewhat out of place.")
   input("Except, in the midst of all the movement, "+playerPronoun+" notices one stationary person.")
   input("A thin man, with green, scaly skin and deeply sunken cheeks, stands in front of a building.")
@@ -267,11 +259,35 @@ def apartmentFirstTime():
   input("With nothing to do, "+playerPronoun+" decides to relax a bit and watch a holoprojection.")
   while True:
     input("Should "+playerPronoun+" watch...")
-    print("(1) URC Galactic News"
-    print("(2) Pimp my Ship"
-    print("(3) 412,361 Larvae and Counting")
+    print("(1) URC Galactic News")
+    print("(2) Pimp my Ship")
+    print("(3) Escape from the Elation Station Part II")
     response = input("? ")
     if response == "1":
-      input("
+      input("'...and the President of the Galactic Allegience has recently announced his departure.'")
+      input("'Let's go right to the President and see what he has to say:'")
+      input("'After the incident on the asteroid of Tariss, I have to announce my resignation.'")
+      input("'I trust that the citizens of our galaxy will...'")
+      input(playerName+" thinks that politics today are insane.")
+      break
+    if response == "2":
+      input("'...and this TR-046 freighter has just been pimped!'")
+      input("'We decided to replace the old, flickering lights with adaptive lights directly connected to the AI.'")
+      input("'And how could you haul in comfort without a pool? We installed the...'")
+      input(playerName+" thinks that television today is trash.")
+      break
+    if response == "3":
+      input("'I... I can't run fast enough!'")
+      input("'They're coming after me! What's happening to me?'")
+      input("'Why am I enjoying this?'")
+      input(playerName+" thinks that movies today are terrible.")
+      break
+  input("After a few hours of holoprojections, "+playerPronoun+" decides to explore the city a bit.")
+  input("There's no projection chamber in "+playerPosPronoun+" apartment, but there may be a projection center in the city.")
+  input(playerCapitalPronoun+" turns off the holoprojector and prepares to leave.")
+  global apartmentFirstTimeCheck
+  apartmentFirstTimeCheck = false
+  core()
+
 initialize()
 core()
