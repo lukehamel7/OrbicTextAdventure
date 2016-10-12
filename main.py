@@ -323,6 +323,20 @@ streetsHoboEncounter()
       input(playerName+" considers the man's words, but can't afford to leave the planet.")
       input(playerPronoun+" continues on "+playerPosPronoun+" way.")
       break
+    if response == "2":
+      input(playerName+" keeps walking, trying to ignore the man.")
+      input("'Hey! Don't ignore me! Listen or you'll regret it!")
+      input(playerCapitalPronoun+" continues on "+playerPosPronoun+" way.")
+      break
+    if response == "3":
+      input(playerName+" walks faster, and hears the man yelling.")
+      input(playerPronoun+" doesn't hear what the man is saying, and doesn't want to engage.")
+      input(playerPronoun+" decides to continue to the simulation center.")
+      break
+  global streetsHoboEncounterCheck
+  streetsHoboEncounterCheck = False
+  
+    
   
 initialize()
 core()
