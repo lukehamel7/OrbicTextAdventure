@@ -289,7 +289,7 @@ def apartmentFirstTime():
       input("'...and this TR-046 freighter has just been pimped!'")
       input("'We decided to replace the old, flickering lights with adaptive lights directly connected to the AI.'")
       input("'And how could you haul in comfort without a pool? We installed the...'")
-      input(playerName+" thinks that television today is trash.")
+      input(playerName+" thinks that shows today are trash.")
       break
     if response == "3":
       input("'I... I can't run fast enough!'")
@@ -298,11 +298,31 @@ def apartmentFirstTime():
       input(playerName+" thinks that movies today are terrible.")
       break
   input("After a few hours of holoprojections, "+playerPronoun+" decides to explore the city a bit.")
-  input("There's no projection chamber in "+playerPosPronoun+" apartment, but there may be a projection center in the city.")
+  input("There's no simulation chamber in "+playerPosPronoun+" apartment, but there may be a simulation center in the city.")
   input(playerCapitalPronoun+" turns off the holoprojector and prepares to leave.")
   global apartmentFirstTimeCheck
-  apartmentFirstTimeCheck = false
+  apartmentFirstTimeCheck = False
+  global streetsHoboEncounterCheck
+  streetsHoboEncounterCheck = False
   core()
 
+streetsHoboEncounter()
+  input("As "+playerName+" walks through the streets, "+playerPronoun+" sees a homeless man in an alley.")
+  input("He screams at "+playerName+" and tries to talk to them.")
+  input("'Don't trust [Company name]! They're brainwashing people! I'm not crazy, I swear!'")
+  while True:
+    input("Should "+playerName+"...")
+    print("(1) Talk to the man")
+    print("(2) Continue walking at the same pace")
+    print("(3) Walk away quickly")
+    response = input("? ")
+    if response == "1":
+      input(playerName+" approaches the man and he continues talking.")
+      input("'Yeah, they're taking people from the streets and brainwashing them! Or doing something to them...")
+      input("'I've seen it myself! If I were you, I would leave this planet.'")
+      input(playerName+" considers the man's words, but can't afford to leave the planet.")
+      input(playerPronoun+" continues on "+playerPosPronoun+" way.")
+      break
+  
 initialize()
 core()
