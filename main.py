@@ -68,6 +68,8 @@ def initialize():
   dockFirstTimeCheck = True
   global apartmentFirstTimeCheck
   apartmentFirstTimeCheck = True
+  global streetsHoboEncounterCheck 
+  streetsHoboEncounterCheck = False
     
   
       
@@ -91,6 +93,8 @@ def core():
     apartmentsFirstTime()
   if location == playerName+"'s apartment" and apartmentFirstTimeCheck == True:
   	apartmentFirstTime()
+  if location == "[City name]'s streets" and streetsHoboEncounterCheck == True:
+    streetsHoboEncounter()
   response = input(playerName+" is currently at "+location+". What would you like to do? ")
   if response.lower() == "ship" and location == playerName+"'s ship":
     ship()
@@ -303,10 +307,10 @@ def apartmentFirstTime():
   global apartmentFirstTimeCheck
   apartmentFirstTimeCheck = False
   global streetsHoboEncounterCheck
-  streetsHoboEncounterCheck = False
+  streetsHoboEncounterCheck = True
   core()
 
-streetsHoboEncounter()
+def streetsHoboEncounter():
   input("As "+playerName+" walks through the streets, "+playerPronoun+" sees a homeless man in an alley.")
   input("He screams at "+playerName+" and tries to talk to them.")
   input("'Don't trust [Company name]! They're brainwashing people! I'm not crazy, I swear!'")
@@ -321,7 +325,7 @@ streetsHoboEncounter()
       input("'Yeah, they're taking people from the streets and brainwashing them! Or doing something to them...")
       input("'I've seen it myself! If I were you, I would leave this planet.'")
       input(playerName+" considers the man's words, but can't afford to leave the planet.")
-      input(playerPronoun+" continues on "+playerPosPronoun+" way.")
+      input(playerCapitalPronoun+" continues on "+playerPosPronoun+" way.")
       break
     if response == "2":
       input(playerName+" keeps walking, trying to ignore the man.")
@@ -335,6 +339,7 @@ streetsHoboEncounter()
       break
   global streetsHoboEncounterCheck
   streetsHoboEncounterCheck = False
+  core()
   
     
   
