@@ -99,6 +99,10 @@ def core():
   	apartmentFirstTime()
   if location == "[City name]'s streets" and streetsHoboEncounterCheck == True:
     streetsHoboEncounter()
+  if location == "High Thrills Simulation Center" and simCenterFirstTimeCheck == True:
+    simCenterFirstTime()
+  if location == "High Thrills Simulation Center" and simCenterAttackCheck == True:
+    simCenterAttack()
   response = input(playerName+" is currently at "+location+". What would you like to do? ")
   if response.lower() == "ship" and location == playerName+"'s ship":
     ship()
@@ -352,7 +356,7 @@ def streetsHoboEncounter():
   simCenterFirstTimeCheck = False
   core()
   
-def simCenterFirstTime:
+def simCenterFirstTime():
   input(playerName+" enters a Simulation Center.")
   input("There's not many people here, but these usually get popular at night.")
   input("Right now "+playerPronoun+" wants to find "+playerPosPronoun+" apartment, but "+playerPronoun+" might come back later.")
@@ -360,7 +364,7 @@ def simCenterFirstTime:
   simCenterFirstTime = False
   core()
 
-def simCenterAttack:
+def simCenterAttack():
   input(playerName+" enters the simulation center, ready to experience whatever it has to offer.")
   input(playerPronoun+" approaches a simulation chamber, pays for it, and stumbles inside.")
   input("A friendly voice booms in from all sides:")
@@ -377,8 +381,8 @@ def simCenterAttack:
   input("As if from nowhere, the ground trembles and part of the wall collapses as a blinding red light appears.")
   input("Millions of objects flicker in front of "+playerName+" as the projectors are destroyed.")
   input(playerPronoun+" falls to the ground and tries to take cover from the falling rubble.")
-  input("Looking up, "+playerPronoun" notices bright lights and the unmistakable whine of a ship flying overhead.")
-  While True:
+  input("Looking up, "+playerPronoun+" notices bright lights and the unmistakable whine of a ship flying overhead.")
+  while True:
     input("Should "+playerName+"...")
     print("(1) Continue to hide in the Sim Center")
     print("(2) Run to "+playerPosPronoun+" ship and pursue the attackers")
@@ -394,7 +398,7 @@ def simCenterAttack:
     if response == "2":
       input(playerName+" rushes out of the building and into their docking bay.")
       input("The Ravager clicks to life, and "+playerPronoun+" circles around to above the Sim Center.")
-      input("Thick smoke billows from the Center, but the ship that attacked is nowhere in sight".)
+      input("Thick smoke billows from the Center, but the ship that attacked is nowhere in sight.")
       input("With disappointment, "+playerName+" lands and ponders what to do next.")
       input(playerPronoun+" decides to investigate the Center.")
       global location
