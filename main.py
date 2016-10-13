@@ -370,15 +370,44 @@ def simCenterAttack:
   input("'Please approach the monitor and select your preferred experience.'")
   input("Should "+playerName+" choose...")
   print("(1) Action-adventure simulation")
-  print("(2) Story observer simulation")
+  print("(2) Historical simulation")
   print("(3) Happy fun time simulation")
   input("? ")
   input("While "+playerName+" struggles to decide, time seems to halt.")
-  input("As if from nowhere, the ground trembles and part of the wall collapses".)
+  input("As if from nowhere, the ground trembles and part of the wall collapses as a blinding red light appears.")
   input("Millions of objects flicker in front of "+playerName+" as the projectors are destroyed.")
   input(playerPronoun+" falls to the ground and tries to take cover from the falling rubble.")
-  input("Looking up, "+playerPronoun" notices brjgbt lights and the unmistakable whine of a ship flying overhead.")
-  
+  input("Looking up, "+playerPronoun" notices bright lights and the unmistakable whine of a ship flying overhead.")
+  While True:
+    input("Should "+playerName+"...")
+    print("(1) Continue to hide in the Sim Center")
+    print("(2) Run to "+playerPosPronoun+" ship and pursue the attackers")
+    print("(3) Flee to "+playerPosPronoun+" apartment")
+    response = input("? ")
+    if response == "1":
+      input(playerName+" stays on the ground, waiting.")
+      input("After what feels like hours, "+playerPronoun+" decides that it must be safe.")
+      input(playerPronoun+" gets up and looks around. Most of the building was destroyed by what must have been laser fire.")
+      input(playerName+" is not injured, and wants to help.")
+      input(playerPronoun+" decide to investigate the area.")
+      break
+    if response == "2":
+      input(playerName+" rushes out of the building and into their docking bay.")
+      input("The Ravager clicks to life, and "+playerPronoun+" circles around to above the Sim Center.")
+      input("Thick smoke billows from the Center, but the ship that attacked is nowhere in sight".)
+      input("With disappointment, "+playerName+" lands and ponders what to do next.")
+      input(playerPronoun+" decides to investigate the Center.")
+      global location
+      location == playerName+"'s ship"
+      break
+    if response == "3":
+      input(playerName+" escapes to the building and runs through the streets.")
+      input(playerPronoun+" hides for a few hours, watching the proceedings from a distance.")
+      input("Eventually, "+playerPronoun+" resolves to investigate the area.")
+      global location
+      location == playerName+"'s apartment"
+      break
+  core()
     
   
 initialize()
