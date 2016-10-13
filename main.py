@@ -19,7 +19,7 @@ def tutorial():
     input("To advance past statements or events (.), simply press enter. For questions (?), type a response first.")
     input("For multiple choice questions, only type the corresponding number.")
     input("For 'yes or no' questions, type 'yes' or 'no'.")
-    input("Will add more to this when there are actual game mechanics to describe.")
+    input("Submit 'Commands' for a list of commands.")
   elif response.lower() == "no" or response.lower() == "n": #Else if, works pretty much the same as def and if. But, you know. Else if. 
     print("Type 'Tutorial' at any time to view the tutorial, or 'Commands' for a command list.")
   else:
@@ -145,7 +145,7 @@ def commands():
 def ship():
   print()
   print("<<Welcome to OorbOS v3.04. Ship #3348 - The Ravager>>")
-  print("   ")
+  print()
   response = input("What would you like to do, "+playerName+"?")
   if response.lower() == "info":
     info()
