@@ -74,6 +74,10 @@ def initialize():
   simCenterFirstTimeCheck = True
   global simCenterAttackCheck
   simCenterAttackCheck = False
+  global simCenterInvestigateCheck
+  simCenterInvestigateCheck = False
+  global simCenterInvestigation
+  simCenterInvestigation = False
     
   
       
@@ -118,6 +122,8 @@ def core():
     move(playerName+"'s apartment")
   elif response.lower() == "move to simulation center" and location == "[City name]'s streets":
     move("High Thrills Simulation Center")
+  elif response.lower() == "investigate"
+    investigate()
   elif response.lower() == "commands":
     commands()
   elif response.lower() == "use map":
@@ -229,7 +235,13 @@ def locationInfo():
 def inventoryInfo():
   print("Haha, let's do this later")
 
-          
+def investigate():
+  if location == "High Thrills Simulation Center" and simCenterInvestigation == True:
+    input("I actually did a decent amount of work today")
+  else:
+    input(playerName+" looks, but can't find anything of interest.")
+  
+  
 #Plot events
 def streetsFirstTime():
   print()
@@ -244,7 +256,7 @@ def streetsFirstTime():
   print()
   global streetsFirstTimeCheck
   streetsFirstTimeCheck = False
-  core()
+  
   
 def apartmentsFirstTime():
   print()
@@ -276,15 +288,19 @@ def apartmentsFirstTime():
       apartmentWomanRelation = 0
       apartmentsFirstTimeCheck = False
       break
+  print()
   
 def dockFirstTime():
+  print()
   input(playerName+" steps onto the docking bay and surveys the area.")
   input("The bays are stacked on top of each other, creating a huge wall with a grid of holes.")
   input(playerName+" remembers the apartment that "+playerPronoun+" rented, and decides to find it.")
   global dockFirstTimeCheck
   dockFirstTimeCheck = False
+  print()
         
 def apartmentFirstTime():
+  print()
   input(playerName+" enters "+playerPosPronoun+" apartment.")
   input("With nothing to do, "+playerPronoun+" decides to relax a bit and watch a holoprojection.")
   while True:
@@ -319,9 +335,11 @@ def apartmentFirstTime():
   apartmentFirstTimeCheck = False
   global streetsHoboEncounterCheck
   streetsHoboEncounterCheck = True
-  core()
+  print()
+  
 
 def streetsHoboEncounter():
+  print()
   input("As "+playerName+" walks through the streets, "+playerPronoun+" sees a homeless man in an alley.")
   input("He screams at "+playerName+" and tries to talk to them.")
   input("'Don't trust [Company name]! They're brainwashing people! I'm not crazy, I swear!'")
@@ -354,19 +372,23 @@ def streetsHoboEncounter():
   simCenterAttackCheck = True
   global simCenterFirstTimeCheck
   simCenterFirstTimeCheck = False
-  core()
+  print()
+  
   
 def simCenterFirstTime():
+  print()
   input(playerName+" enters a Simulation Center.")
   input("There's not many people here, but these usually get popular at night.")
   input("Right now "+playerPronoun+" wants to find "+playerPosPronoun+" apartment, but "+playerPronoun+" might come back later.")
   global simCenterFirstTimeCheck
   simCenterFirstTimeCheck = False
-  core()
+  print()
+  
 
 def simCenterAttack():
+  print()
   input(playerName+" enters the simulation center, ready to experience whatever it has to offer.")
-  input(playerPronoun+" approaches a simulation chamber, pays for it, and stumbles inside.")
+  input(playerCapitalPronoun+" approaches a simulation chamber, pays for it, and stumbles inside.")
   input("A friendly voice booms in from all sides:")
   input("'Welcome to High Thrills Simulation Center!'")
   input("'We have a number of high quality simulations here, and we hope you enjoy your stay.")
@@ -393,6 +415,7 @@ def simCenterAttack():
       input("After what feels like hours, "+playerPronoun+" decides that it must be safe.")
       input(playerCapitalPronoun+" gets up and looks around. Most of the building was destroyed by what must have been laser fire.")
       input(playerName+" is not injured, and wants to help.")
+      input(playerCapitalPronoun+" notices reporters, rescue teams, and other uninjured survivors around the building.")
       input(playerCapitalPronoun+" decide to investigate the area.")
       break
     if response == "2":
@@ -403,6 +426,8 @@ def simCenterAttack():
       input(playerCapitalPronoun+" decides to investigate the Center.")
       global location
       location = playerName+"'s ship"
+      global simCenterInvestigateCheck
+      simCenterInvestigateCheck = True
       break
     if response == "3":
       input(playerName+" escapes to the building and runs through the streets.")
@@ -410,11 +435,24 @@ def simCenterAttack():
       input("Eventually, "+playerPronoun+" resolves to investigate the area.")
       global location
       location = playerName+"'s apartment"
+      global simCenterInvestigateCheck
+      simCenterInvestigateCheck = True
       break
   global simCenterAttackCheck
   simCenterAttackCheck = False
-  core()
-    
+  global simCenterInvestigation
+  simCenterInvestigation = True
+  print()
+  
+def simCenterInvestigate():
+  print()
+  input(playerName+" returns to the Simulation Center.")
+  input("People are being carried away for medical help and others are recovering on the ground.")
+  input("Most parts of the rubble have been checked, but search teams still look for survivors.")
+  input("News teams report on the attack from a distance.")
+  print()
+  global simCenterInvestigateCheck
+  simCenterInvestigateCheck = False
   
 initialize()
 core()
