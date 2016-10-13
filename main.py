@@ -402,14 +402,14 @@ def simCenterAttack():
       input("With disappointment, "+playerName+" lands and ponders what to do next.")
       input(playerCapitalPronoun+" decides to investigate the Center.")
       global location
-      location == playerName+"'s ship"
+      location = playerName+"'s ship"
       break
     if response == "3":
       input(playerName+" escapes to the building and runs through the streets.")
       input(playerCapitalPronoun+" hides for a few hours, watching the proceedings from a distance.")
       input("Eventually, "+playerPronoun+" resolves to investigate the area.")
       global location
-      location == playerName+"'s apartment"
+      location = playerName+"'s apartment"
       break
   global simCenterAttackCheck
   simCenterAttackCheck = False
