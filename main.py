@@ -70,6 +70,10 @@ def initialize():
   apartmentFirstTimeCheck = True
   global streetsHoboEncounterCheck 
   streetsHoboEncounterCheck = False
+  global simCenterFirstTimeCheck
+  simCenterFirstTimeCheck = True
+  global simCenterAttackCheck
+  simCenterAttackCheck = False
     
   
       
@@ -102,13 +106,14 @@ def core():
     move("docking bay 825")
   elif response.lower() == "move to ship" and location == "docking bay 825":
     move(playerName+"'s ship")
-  elif response.lower() == "move to streets" and (location == "docking bay 825" or location == "the apartment lobby"):
+  elif response.lower() == "move to streets" and (location == "docking bay 825" or location == "the apartment lobby" or location == "High Thrills Simulation Center"):
     move("[City name]'s streets")
   elif response.lower() == "move to apartments" and (location == "[City name]'s streets" or location == playerName+"'s apartment"):
     move("the apartment lobby")
   elif response.lower() == "move to apartment" and location == "the apartment lobby":
     move(playerName+"'s apartment")
-  
+  elif response.lower() == "move to simulation center" and location == "[City name]'s streets":
+    move("High Thrills Simulation Center")
   elif response.lower() == "commands":
     commands()
   elif response.lower() == "use map":
@@ -166,15 +171,17 @@ def info():
 def map():
   input("Here are the places you can move to:")
   if location == "docking bay 825":
-    input("ship")
+    input("Ship")
   if location == playerName+"'s ship" or location == "[City name]'s streets": 
-    input("dock")
-  if location == "docking bay 825" or location == "the apartment lobby":
-    input("streets")
+    input("Dock")
+  if location == "docking bay 825" or location == "the apartment lobby" or location == "High Thrills Simulation Center": 
+    input("Streets")
   if location == "[City name]'s streets" or location == playerName+"'s apartment":
-    input("apartments")
+    input("Apartments")
   if location == "the apartment lobby":
-    input("apartment")
+    input("Apartment")
+  if location == "[City name]'s streets":
+    input("Simulation center")
   print()
   core()
     
@@ -334,12 +341,43 @@ def streetsHoboEncounter():
       break
     if response == "3":
       input(playerName+" walks faster, and hears the man yelling.")
-      input(playerPronoun+" doesn't hear what the man is saying, and doesn't want to engage.")
-      input(playerPronoun+" decides to continue to the simulation center.")
+      input(playerCapitalPronoun+" doesn't hear what the man is saying, and doesn't want to engage.")
+      input(playerCapitalPronoun+" decides to continue to the simulation center.")
       break
   global streetsHoboEncounterCheck
   streetsHoboEncounterCheck = False
+  global simCenterAttackCheck
+  simCenterAttackCheck = True
+  global simCenterFirstTimeCheck
+  simCenterFirstTimeCheck = False
   core()
+  
+def simCenterFirstTime:
+  input(playerName+" enters a Simulation Center.")
+  input("There's not many people here, but these usually get popular at night.")
+  input("Right now "+playerPronoun+" wants to find "+playerPosPronoun+" apartment, but "+playerPronoun+" might come back later.")
+  global simCenterFirstTime
+  simCenterFirstTime = False
+  core()
+
+def simCenterAttack:
+  input(playerName+" enters the simulation center, ready to experience whatever it has to offer.")
+  input(playerPronoun+" approaches a simulation chamber, pays for it, and stumbles inside.")
+  input("A friendly voice booms in from all sides:")
+  input("'Welcome to High Thrills Simulation Center!'")
+  input("'We have a number of high quality simulations here, and we hope you enjoy your stay.")
+  input("'After 1 hour, the simulation will end and you should exit the chamber or pay for another round.'")
+  input("'Please approach the monitor and select your preferred experience.'")
+  input("Should "+playerName+" choose...")
+  print("(1) Action-adventure simulation")
+  print("(2) Story observer simulation")
+  print("(3) Happy fun time simulation")
+  input("? ")
+  input("While "+playerName+" struggles to decide, time seems to halt.")
+  input("As if from nowhere, the ground trembles and part of the wall collapses".)
+  input("Millions of objects flicker in front of "+playerName+" as the projectors are destroyed.")
+  input(playerPronoun+" falls to the ground and tries to take cover from the falling rubble.")
+  input("Looking up, "+playerPronoun" notices brjgbt lights and the unmistakable whine of a ship flying overhead.")
   
     
   
