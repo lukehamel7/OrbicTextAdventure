@@ -122,7 +122,7 @@ def core():
     move(playerName+"'s apartment")
   elif response.lower() == "move to simulation center" and location == "[City name]'s streets":
     move("High Thrills Simulation Center")
-  elif response.lower() == "investigate"
+  elif response.lower() == "investigate":
     investigate()
   elif response.lower() == "commands":
     commands()
