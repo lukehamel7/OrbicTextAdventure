@@ -388,7 +388,7 @@ def simCenterFirstTime():
 def simCenterAttack():
   print()
   input(playerName+" enters the simulation center, ready to experience whatever it has to offer.")
-  input(playerCapitalPronoun+" approaches a simulation chamber, pays for it, and stumbles inside.")
+  input(playerCapitalPronoun+" approaches a simulation chamber, pays for it, and walks inside.")
   input("A friendly voice booms in from all sides:")
   input("'Welcome to High Thrills Simulation Center!'")
   input("'We have a number of high quality simulations here, and we hope you enjoy your stay.")
@@ -498,7 +498,6 @@ def simCenterInvestigation():
 
 def apartmentsSecondTime:
   input(playerName+" walks into the apartment lobby, exhausted.")
-  input(playerCapitalPronoun+" took a slower route this time, and stopped to buy a drink halfway through.")
   if apartmentWomanRelation == 3:
     input("The secretary looks up and smiles, seemingly remembering "+playerName+"'s politeness.")
   if apartmentWomanRelation == 0:
@@ -511,5 +510,9 @@ def apartmentMurderScene
   input(playerName+" enters their apartment, and notices a strange odor.")
   input(playerCapitalPronoun+" looks around for the source, and enters the bedroom area.")
   input("Between the bed and the wall, a corpse lies on the ground.")
+  input(playerName+" recoils in shock. A body?")
+  input(playerCapitalPronoun+" starts to leave the apartment, sick.")
+  input("As "+playerPronoun+" stumbles outside, police officers run through the hallway and apprehend "+playerName+".")
+
 initialize()
 core()
