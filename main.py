@@ -513,6 +513,11 @@ def apartmentMurderScene
   input(playerName+" recoils in shock. A body?")
   input(playerCapitalPronoun+" starts to leave the apartment, sick.")
   input("As "+playerPronoun+" stumbles outside, police officers run through the hallway and apprehend "+playerName+".")
-
+  input(playerCapitalPronoun+" is forced into the back of the police lift, handcuffed.")
+  input("While "+playerName+" is brought to the police station, "+playerPronoun+" wonders how this could have happened.")
+  input("The attack on the sim center, the body in "+playerPosPronoun+" apartment... There must be some explanation.")
+  input(playerCapitalPronoun+" had come to this planet to settle down, but it looks like "+playerPosPronoun+" life is only going to get more complicated.")
+  global planet
+  
 initialize()
 core()
