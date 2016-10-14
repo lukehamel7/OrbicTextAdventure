@@ -237,7 +237,7 @@ def inventoryInfo():
 
 def investigate():
   if location == "High Thrills Simulation Center" and simCenterInvestigation == True:
-    input("I actually did a decent amount of work today")
+    simCenterInvestigation()
   else:
     input(playerName+" looks, but can't find anything of interest.")
   
@@ -273,13 +273,13 @@ def apartmentsFirstTime():
     if response.lower() == "1":
       input("The woman smiles and hands "+playerName+" the key to the apartment.")
       input("She tells "+playerObjectPronoun+" the room number, and demonstrates how the key should be scanned.")
-      apartmentWomanRelation = 1
+      apartmentWomanRelation = 3
       apartmentsFirstTimeCheck = False
       break
     if response.lower() == "2":
       input("The woman glares and begrudgingly gives "+playerName+" the key to the apartment.")
       input("She tells "+playerObjectPronoun+" where to find the room number.")
-      apartmentWomanRelation = -1
+      apartmentWomanRelation = -3
       apartmentsFirstTimeCheck = False
       break
     if response.lower() == "3":
@@ -454,5 +454,62 @@ def simCenterInvestigate():
   global simCenterInvestigateCheck
   simCenterInvestigateCheck = False
   
+def simCenterInvestigation():
+  print()
+  input(playerName+" looks around and sees a man sitting down, looking shaken.")
+  input(playerCapitalPronoun+" approaches the man to talk to him.")
+  global simCenterManRelation
+  while True:
+    input("Should "+playerName+" ask...")
+    print("(1) If the man is okay")
+    print("(2) What the man saw")
+    print("(3) If the man was involved")
+    response = input("? ")
+    if response == "1":
+      input("'Yeah, I'm fine, thanks for asking.'")
+      input("'I was outside the center when it was attacked, so I basically saw everything.'")
+      input("'It was terrifying, but luckily I wasn't hurt at all.'")
+      input("'The ship that attacked was a model that the pirates are known for using.'")
+      input("'They've never attacked this city before, but they're active in this sector.'")
+      input("'I just wonder why they only attacked the sim center...'")
+      simCenterManRelation = 3
+      break
+    if response == "2":
+      input("'I saw everything, I was just outside the sim center.'")
+      input("'I was walking towards it when I saw a ship flying close to the center, and the ship fired on it!'")
+      input("'I'm no expert on ships, but it looked like the kind you would expect pirates to use.'")
+      input("'It would make sense, considering those pirates are active in the sector.'")
+      input("'I don't know why they only attacked the sim center though, maybe they have something against the owner?'")
+      simCenterManRelation = 0
+      break
+    if response == "3":
+      input("'What? Of course I wasn't!'")
+      input("'Listen, I was just walking towards the sim center.'")
+      input("'It must have been the pirates who did it. They're the only ones who would do something like that.'")
+      input("'They're active in this sector, and the ship that attacked totally looked it belonged to them.'")
+      simCenterManRelation = -3
+      break
+  input(playerName+" decides that "+playerPronoun+"'s learned enough to make conclusions.")
+  input("It must have been pirates who attacked the center, although their reasoning was unclear.")
+  input(playerName+" realizes how tired "+playerPronoun+" is.")
+  input(playerCapitalPronoun+" resolves to go to sleep and possibly follow up in the morning.")
+  simCenterInvestigationCheck = False
+  print()
+
+def apartmentsSecondTime:
+  input(playerName+" walks into the apartment lobby, exhausted.")
+  input(playerCapitalPronoun+" took a slower route this time, and stopped to buy a drink halfway through.")
+  if apartmentWomanRelation == 3:
+    input("The secretary looks up and smiles, seemingly remembering "+playerName+"'s politeness.")
+  if apartmentWomanRelation == 0:
+    input("The secretary looks up before going back to work.")
+    input(playerName+", embarrassed, keeps walking.")
+  if apartmentWomanRelation == -3:
+    input("The secretary looks up and frowns. She looks like she's trying to hide anger.")
+  
+def apartmentMurderScene
+  input(playerName+" enters their apartment, and notices a strange odor.")
+  input(playerCapitalPronoun+" looks around for the source, and enters the bedroom area.")
+  input("Between the bed and the wall, a corpse lies on the ground.")
 initialize()
 core()
