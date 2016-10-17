@@ -245,17 +245,19 @@ def inventoryInfo():
   print("Haha, let's do this later")
 
 def investigate():
-  if location == "High Thrills Simulation Center" and simCenterInvestigation == True:
+  if location == "High Thrills Simulation Center" and simCenterInvestigationCheck == True:
     simCenterInvestigation()
   else:
     input(playerName+" looks, but can't find anything of interest.")
+    core()
   
 def save():
   f = open("save.txt","w")
   f.write(playerName)
   f.write(playerGender)
   f.write(apartmentWomanRelation)
-  f.write(
+  f.write(simCenterManRelation)
+  f.write(act)
   
 #Plot events
 def streetsFirstTime():
@@ -516,7 +518,7 @@ def simCenterInvestigation():
   apartmentMurderSceneCheck = True
   print()
 
-def apartmentsSecondTime:
+def apartmentsSecondTime():
   input(playerName+" walks into the apartment lobby, exhausted.")
   if apartmentWomanRelation == 3:
     input("The secretary looks up and smiles, seemingly remembering "+playerName+"'s politeness.")
@@ -528,7 +530,7 @@ def apartmentsSecondTime:
   global apartmentsSecondTimeCheck
   apartmentsSecondTimeCheck = False
   
-def apartmentMurderScene
+def apartmentMurderScene():
   input(playerName+" enters their apartment, and notices a strange odor.")
   input(playerCapitalPronoun+" looks around for the source, and enters the bedroom area.")
   input("Between the bed and the wall, a corpse lies on the ground.")
