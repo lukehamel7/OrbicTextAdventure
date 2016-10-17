@@ -78,7 +78,10 @@ def initialize():
   simCenterInvestigateCheck = False
   global simCenterInvestigation
   simCenterInvestigation = False
-    
+  global apartmentsSecondTimeCheck
+  apartmentsSecondTimeCheck = False
+  global apartmentMurderSceneCheck
+  apartmentMurderSceneCheck = False
   
       
   input(""+playerName+"'s ship exits hyperspace as a planet begins to enter "+playerPosPronoun+" view.")
@@ -107,6 +110,10 @@ def core():
     simCenterFirstTime()
   if location == "High Thrills Simulation Center" and simCenterAttackCheck == True:
     simCenterAttack()
+  if location == "the apartment lobby" and apartmentsSecondTimeCheck == True:
+    apartmentsSecondTime()
+  if location == playerName+"'s apartment" and apartmentMurderSceneCheck == True:
+    apartmentMurderScene()
   response = input(playerName+" is currently at "+location+". What would you like to do? ")
   if response.lower() == "ship" and location == playerName+"'s ship":
     ship()
@@ -493,7 +500,12 @@ def simCenterInvestigation():
   input("It must have been pirates who attacked the center, although their reasoning was unclear.")
   input(playerName+" realizes how tired "+playerPronoun+" is.")
   input(playerCapitalPronoun+" resolves to go to sleep and possibly follow up in the morning.")
+  global simCenterInvestigationCheck
   simCenterInvestigationCheck = False
+  global apartmentsSecondTimeCheck
+  apartmentsSecondTimeCheck = True
+  global apartmentMurderSceneCheck
+  apartmentMurderSceneCheck = True
   print()
 
 def apartmentsSecondTime:
@@ -505,6 +517,8 @@ def apartmentsSecondTime:
     input(playerName+", embarrassed, keeps walking.")
   if apartmentWomanRelation == -3:
     input("The secretary looks up and frowns. She looks like she's trying to hide anger.")
+  global apartmentsSecondTimeCheck
+  apartmentsSecondTimeCheck = False
   
 def apartmentMurderScene
   input(playerName+" enters their apartment, and notices a strange odor.")
@@ -516,8 +530,14 @@ def apartmentMurderScene
   input(playerCapitalPronoun+" is forced into the back of the police lift, handcuffed.")
   input("While "+playerName+" is brought to the police station, "+playerPronoun+" wonders how this could have happened.")
   input("The attack on the sim center, the body in "+playerPosPronoun+" apartment... There must be some explanation.")
-  input(playerCapitalPronoun+" had come to this planet to settle down, but it looks like "+playerPosPronoun+" life is only going to get more complicated.")
+  input(playerCapitalPronoun+" had come to this planet to start a new life, but it looks like "+playerPosPronoun+" life is only going to get more complicated.")
+  response = input("End of Act 1, and end of this release.")
+  apartmentMurderSceneCheck = False
+
+    
+  
   global planet
+  planet = asteroid
   
 initialize()
 core()
