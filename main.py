@@ -60,6 +60,8 @@ def initialize():
   location = playerName+"'s ship" #The 'location' string will be pretty important. It's also used in main(), so all location names should look decent when it says "You are currently at [location]". That's why I called it "your ship" and not just "ship".
   global planet
   planet = "domaterum"
+  global act
+  act = 1
   global streetsFirstTimeCheck
   streetsFirstTimeCheck = True
   global apartmentsFirstTimeCheck
@@ -248,6 +250,12 @@ def investigate():
   else:
     input(playerName+" looks, but can't find anything of interest.")
   
+def save():
+  f = open("save.txt","w")
+  f.write(playerName)
+  f.write(playerGender)
+  f.write(apartmentWomanRelation)
+  f.write(
   
 #Plot events
 def streetsFirstTime():
@@ -531,7 +539,15 @@ def apartmentMurderScene
   input("While "+playerName+" is brought to the police station, "+playerPronoun+" wonders how this could have happened.")
   input("The attack on the sim center, the body in "+playerPosPronoun+" apartment... There must be some explanation.")
   input(playerCapitalPronoun+" had come to this planet to start a new life, but it looks like "+playerPosPronoun+" life is only going to get more complicated.")
-  response = input("End of Act 1, and end of this release.")
+  input("End of Act 1.")
+  global act
+  act = 2
+  response = input("Do you want to save?")
+  while True:
+    if response.lower() == "yes" or response.lower() == "y":
+      save()
+    if response.lower() == "no" or response.lower() == "n":
+      break
   apartmentMurderSceneCheck = False
 
     
