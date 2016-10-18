@@ -1,3 +1,18 @@
+#Orbic Legacy 2016 Luke Hamel & Connor Jordan
+print("   __________________________________    ")
+print("  /        \       \     \     /     `.  ")
+print("  |        |       |     /    |    .-./             A Text Adventure   ")
+print("  |   /\   |       /      \   |   |                        by   ")
+print("  |   \/   |       \       \  |   I            Luke Hamel & Connor Jordan")
+print("  |        |        \_     |  |    `-`\      ")
+print("  \________/___/\____/_____/___\_____,i'_     ___       ____  ____    ___ ")
+print("             \    ;   \     ___ /`   __  \   /    \    /     `.\   \/   /    ")
+print("              |   |    |   [   \|   /  `_/  /      \  |    .-./ \      /    ") 
+print("              |   |    |    `-_ |  |  ____ /    .   \ |   |      /    /  ") 
+print("              |   \   /|    /`  |  | |__  |    __    \|   I     /   /     ") 
+print("              |    `-` |   [___/|   ` `   |  .'  '.   \   `-`\_/   /      ")
+print("              /________/_________\_____/\_|__\    /____\___________\       ")
+print("   ")
 def tutorial():
   response = input("Would you like to play the tutorial? ")
   if response.lower() == "yes" or response.lower() == "y":
@@ -241,10 +256,10 @@ def investigate():
 def save():
   f = open("save.txt","w")
   f.write(playerName)
-  f.write(playerGender)
-  f.write(act)
-  f.write(apartmentWomanRelation)
-  f.write(simCenterManRelation)
+  f.write(str(playerGender))
+  f.write(str(act))
+  f.write(str(apartmentWomanRelation))
+  f.write(str(simCenterManRelation))
 
   
 #Plot events
@@ -508,6 +523,7 @@ def simCenterInvestigation():
   core()
 
 def apartmentsSecondTime():
+  print()
   input(playerName+" walks into the apartment lobby, exhausted.")
   if apartmentWomanRelation == 3:
     input("The secretary looks up and smiles, seemingly remembering "+playerName+"'s politeness.")
@@ -516,10 +532,12 @@ def apartmentsSecondTime():
     input(playerName+", embarrassed, keeps walking.")
   if apartmentWomanRelation == -3:
     input("The secretary looks up and frowns. She looks like she's trying to hide anger.")
+  print()
   global apartmentsSecondTimeCheck
   apartmentsSecondTimeCheck = False
   
 def apartmentMurderScene():
+  print()
   input(playerName+" enters their apartment, and notices a strange odor.")
   input(playerCapitalPronoun+" looks around for the source, and enters the bedroom area.")
   input("Between the bed and the wall, a corpse lies on the ground.")
