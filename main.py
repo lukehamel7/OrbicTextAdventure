@@ -84,6 +84,10 @@ def initialize():
   apartmentsSecondTimeCheck = False
   global apartmentMurderSceneCheck
   apartmentMurderSceneCheck = False
+  global prepRoomFirstTimeCheck
+  prepRoomFirstTimeCheck = True
+  global courtroomFirstTimeCheck
+  courtroomFirstTimeCheck = True
   
       
   input(""+playerName+"'s ship exits hyperspace as a planet begins to enter "+playerPosPronoun+" view.")
@@ -118,6 +122,8 @@ def core():
     apartmentsSecondTime()
   if location == playerName+"'s apartment" and apartmentMurderSceneCheck == True:
     apartmentMurderScene()
+  if location == "the Defense preparation room" and prepRoomFirstTimeCheck == True:
+    prepRoomFirstTime
   response = input(playerName+" is currently at "+location+". What would you like to do? ")
   if response.lower() == "ship" and location == playerName+"'s ship":
     ship()
@@ -133,6 +139,10 @@ def core():
     move(playerName+"'s apartment")
   elif response.lower() == "move to simulation center" and location == "[City name]'s streets":
     move("High Thrills Simulation Center")
+  elif response.lower() == "move to courtroom" and location == "the Defense preparation room":
+    move("[Asteroid] courtroom #4")
+  elif response.lower() == "move to prep room" and location == "[Asteroid] courtroom #4":
+    move("the Defense preparation room")
   elif response.lower() == "investigate":
     investigate()
   elif response.lower() == "commands":
@@ -203,6 +213,10 @@ def map():
     input("Apartment")
   if location == "[City name]'s streets":
     input("Simulation center")
+  if location == "the Defense preparation room":
+    input("Courtroom")
+  if location == "[Asteroid] courtroom #4":
+    input("Prep room")
   print()
   core()
     
@@ -556,7 +570,7 @@ def apartmentMurderScene():
   global planet
   planet = "asteroid"
   global location
-  location = "The Defense preparation room"
+  location = "the Defense preparation room"
   response = input("Do you want to save?")
   while True:
     if response.lower() == "yes" or response.lower() == "y":
@@ -567,13 +581,16 @@ def apartmentMurderScene():
 
 def prepRoomFirstTime():
   print()
-  input("2 months later")
+  input("2 months later.")
   print()
   input(playerName+"sits in the preparation room while "+playerPosPronoun+" lawyer talks to "+playerObjectPronoun)
   input(playerCapitalPronoun+" finds it hard to pay attention, and can't help but think of why this happened.")
   input("With no motive, one would think that "+playerName+" would be found innocent.")
   input("However, the evidence against "+playerObjectPronoun+" is enough.")
-  input(playerCapitalPronoun+" is called into the courtroom.")
+  input(playerName+" is called into the courtroom.")
+  global prepRoomFirstTimeCheck
+  prepRoomFirstTimeCheck = False
+  
   
   
 initialize()
