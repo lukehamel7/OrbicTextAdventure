@@ -588,9 +588,14 @@ def prepRoomFirstTime():
   input("With no motive, one would think that "+playerName+" would be found innocent.")
   input("However, the evidence against "+playerObjectPronoun+" is enough.")
   input(playerName+" is called into the courtroom.")
+  print()
   global prepRoomFirstTimeCheck
   prepRoomFirstTimeCheck = False
-  
+
+
+def courtroomFirstTime():
+	print()
+	input("
   
   
 initialize()
