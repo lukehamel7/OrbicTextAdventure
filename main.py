@@ -566,7 +566,12 @@ def apartmentMurderScene():
   core()
 
 def prepRoomFirstTime():
-  input("This is getting intense")
+  print()
+  input("2 months later")
+  print()
+  input(playerName+"sits in the preparation room while "+playerPosPronoun+" lawyer talks to "+playerObjectPronoun)
+  input(playerCapitalPronoun+" finds it hard to pay attention, and can't help but think of why this happened.")
+  input("So far
   
 initialize()
 core()
