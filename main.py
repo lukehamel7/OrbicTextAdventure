@@ -1,18 +1,3 @@
-#Orbic Legacy 2016 Luke Hamel & Connor Jordan
-print("   __________________________________    ")
-print("  /        \       \     \     /     `.  ")
-print("  |        |       |     /    |    .-./             A Text Adventure   ")
-print("  |   /\   |       /      \   |   |                        by   ")
-print("  |   \/   |       \       \  |   I            Luke Hamel & Connor Jordan")
-print("  |        |        \_     |  |    `-`\      ")
-print("  \________/___/\____/_____/___\_____,i'_     ___       ____  ____    ___ ")
-print("             \    ;   \     ___ /`   __  \   /    \    /     `.\   \/   /    ")
-print("              |   |    |   [   \|   /  `_/  /      \  |    .-./ \      /    ") 
-print("              |   |    |    `-_ |  |  ____ /    .   \ |   |      /    /  ") 
-print("              |   \   /|    /`  |  | |__  |    __    \|   I     /   /     ") 
-print("              |    `-` |   [___/|   ` `   |  .'  '.   \   `-`\_/   /      ")
-print("              /________/_________\_____/\_|__\    /____\___________\       ")
-print("   ")
 def tutorial():
   response = input("Would you like to play the tutorial? ")
   if response.lower() == "yes" or response.lower() == "y":
@@ -78,8 +63,8 @@ def initialize():
   simCenterAttackCheck = False
   global simCenterInvestigateCheck
   simCenterInvestigateCheck = False
-  global simCenterInvestigation
-  simCenterInvestigation = False
+  global simCenterInvestigationCheck
+  simCenterInvestigationCheck = False
   global apartmentsSecondTimeCheck
   apartmentsSecondTimeCheck = False
   global apartmentMurderSceneCheck
@@ -112,6 +97,8 @@ def core():
     simCenterFirstTime()
   if location == "High Thrills Simulation Center" and simCenterAttackCheck == True:
     simCenterAttack()
+  if location == "High Thrills Simulation Center" and simCenterInvestigateCheck == True:
+    simCenterInvestigate()
   if location == "the apartment lobby" and apartmentsSecondTimeCheck == True:
     apartmentsSecondTime()
   if location == playerName+"'s apartment" and apartmentMurderSceneCheck == True:
@@ -255,9 +242,10 @@ def save():
   f = open("save.txt","w")
   f.write(playerName)
   f.write(playerGender)
+  f.write(act)
   f.write(apartmentWomanRelation)
   f.write(simCenterManRelation)
-  f.write(act)
+
   
 #Plot events
 def streetsFirstTime():
@@ -457,8 +445,8 @@ def simCenterAttack():
       break
   global simCenterAttackCheck
   simCenterAttackCheck = False
-  global simCenterInvestigation
-  simCenterInvestigation = True
+  global simCenterInvestigationCheck
+  simCenterInvestigationCheck = True
   print()
   
 def simCenterInvestigate():
@@ -517,6 +505,7 @@ def simCenterInvestigation():
   global apartmentMurderSceneCheck
   apartmentMurderSceneCheck = True
   print()
+  core()
 
 def apartmentsSecondTime():
   input(playerName+" walks into the apartment lobby, exhausted.")
