@@ -571,7 +571,10 @@ def prepRoomFirstTime():
   print()
   input(playerName+"sits in the preparation room while "+playerPosPronoun+" lawyer talks to "+playerObjectPronoun)
   input(playerCapitalPronoun+" finds it hard to pay attention, and can't help but think of why this happened.")
-  input("So far
+  input("With no motive, one would think that "+playerName+" would be found innocent.")
+  input("However, the evidence against "+playerObjectPronoun+" is enough.")
+  input(playerCapitalPronoun+" is called into the courtroom.")
+  
   
 initialize()
 core()
