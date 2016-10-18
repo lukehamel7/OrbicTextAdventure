@@ -551,18 +551,22 @@ def apartmentMurderScene():
   input("End of Act 1.")
   global act
   act = 2
+  global apartmentMurderSceneCheck
+  apartmentMurderSceneCheck = False
+  global planet
+  planet = "asteroid"
+  global location
+  location = "The Defense preparation room"
   response = input("Do you want to save?")
   while True:
     if response.lower() == "yes" or response.lower() == "y":
       save()
     if response.lower() == "no" or response.lower() == "n":
       break
-  apartmentMurderSceneCheck = False
+  core()
 
-    
-  
-  global planet
-  planet = asteroid
+def prepRoomFirstTime():
+  input("This is getting intense")
   
 initialize()
 core()
