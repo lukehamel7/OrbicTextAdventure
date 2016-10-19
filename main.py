@@ -599,7 +599,7 @@ def courtroomFirstTime():
   input("Silence falls over the audience as they watch "+playerObjectPronoun+" closely.")
   input("The Judge proclaims,")
   input("'This will be the final trial for "+playerName+". I believe we have all come to a conclusion.'")
-  input("
+ 
   
   
   
