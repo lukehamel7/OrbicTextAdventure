@@ -600,7 +600,8 @@ def courtroomFirstTime():
   input("The Judge proclaims,")
   input("'This will be the final trial for "+playerName+". I believe we have all come to a conclusion.'")
   input("'Prosecution, could you restate your case for the court?'")
-  input("A 
+  input("A tall woman clears her throat.")
+  input("'
   input("'Defendant, do you want to call another witness?'")
   input("Should "+playerName+"...")
   print("(1) Call the 
