@@ -601,10 +601,43 @@ def courtroomFirstTime():
   input("'This will be the final trial for "+playerName+". I believe we have all come to a conclusion.'")
   input("'Prosecution, could you restate your case for the court?'")
   input("A tall woman clears her throat.")
-  input("'
+  input("'As we have discussed at lengths, the defendant is the only person who could have killed the victim.'")
+  input("'The victim died only an hour before they were found.'")
+  input("'Thanks to the apartment's keycard logs, we know that only the defendant entered their apartment at that time.'")
+  input("'Admittedly, we found no relation between the victim and defendant. However, the evidence stands for itself.'")
+  input("The woman steps down and looks pleased with herself.")
+  input("At this point, "+playerName+" practically believes "+playerPronoun+" killed the victim.")
   input("'Defendant, do you want to call another witness?'")
-  input("Should "+playerName+"...")
-  print("(1) Call the 
+  while True:
+    input("Should "+playerName+"...")
+    print("(1) Call the apartment's secretary to the stand")
+    print("(2) Call the man who saw the sim center attack to the stand")
+    print("(3) Accuse the Reptilian man in the streets")
+    response = input("? ")
+      if response == 1:
+        input(playerName+" calls the apartment's secretary to the stand.")
+        input("She had already testified about the keycard, but "+playerName+" suggests she testify about "+playerPosPronoun+".")
+        if apartmentWomanRelation == 3:
+          input("She tells the court that "+playerName+" seemed like a nice person.")
+          input("She doesn't want to believe that "+playerPronoun+" killed someone, but thinks that anything is possible.")
+        if apartmentWomanRelation == -3:
+          input("She tells the court that "+playerName+" seemed like a rude person.")
+          input("She had doubts about "+playerObjectPronoun+" killing someone, but the evidence makes it clear.")
+        if apartmentWomanRelation == 0:
+          input("She tells the court that "+playerName+" seemed like an awkward person.")
+          input("While "+playerPosPronoun+" social skills seemed lacking, she finds it hard to believe that "+playerPronoun+" killed someone.")
+        input("The court believes that the evidence speaks for itself.")
+        input(playerName+" realizes that calling her to the witness stand did not help his case.")
+      if response == 2:
+        input(playerName+" calls the man "+playerPronoun+" talked to at the sim center to the stand.")
+        input("They didn't talk for long, but it must be better than nothing.")
+        input("The man is eventually found and brought to the witness stand.")
+        if simCenterManRelation == 3:
+          input("He tells the court that "+playerName+" seemed like a good person.")
+          input("He explains that they didn't talk for long, but "+playerName+" was worried about his health.")
+          input("He doesn't think that "+playerName+" could have killed someone, but the evidence speaks for itself.")
+        if simCenterManRelation
+  
   
   
   
