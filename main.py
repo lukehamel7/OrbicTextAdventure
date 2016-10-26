@@ -604,7 +604,7 @@ def courtroomFirstTime():
   input("'As we have discussed at lengths, the defendant is the only person who could have killed the victim.'")
   input("'The victim died only an hour before they were found.'")
   input("'Thanks to the apartment's keycard logs, we know that only the defendant entered their apartment at that time.'")
-  input("'Admittedly, we found no relation between the victim and defendant. However, the evidence stands for itself.'")
+  input("'Admittedly, we found no relation between the victim and defendant. However, the evidence speaks for itself.'")
   input("The woman steps down and looks pleased with herself.")
   input("At this point, "+playerName+" practically believes "+playerPronoun+" killed the victim.")
   input("'Defendant, do you want to call another witness?'")
@@ -626,7 +626,7 @@ def courtroomFirstTime():
         if apartmentWomanRelation == 0:
           input("She tells the court that "+playerName+" seemed like an awkward person.")
           input("While "+playerPosPronoun+" social skills seemed lacking, she finds it hard to believe that "+playerPronoun+" killed someone.")
-        input("The court believes that the evidence speaks for itself.")
+        input("The court still believes that "+playerName+" is guilty.")
         input(playerName+" realizes that calling her to the witness stand did not help his case.")
       if response == 2:
         input(playerName+" calls the man "+playerPronoun+" talked to at the sim center to the stand.")
@@ -635,10 +635,18 @@ def courtroomFirstTime():
         if simCenterManRelation == 3:
           input("He tells the court that "+playerName+" seemed like a good person.")
           input("He explains that they didn't talk for long, but "+playerName+" was worried about his health.")
-          input("He doesn't think that "+playerName+" could have killed someone, but the evidence speaks for itself.")
-        if simCenterManRelation
-  
-  
+          input("The man doesn't think that "+playerName+" could have killed someone, but the evidence speaks for itself.")
+        if simCenterManRelation == 0:
+          input("He tells the court that "+playerName+" didn't seem like he would kill someone.")
+          input("He explains that they didn't talk for long, and "+playerName+" was only interested in the details of the attack.")
+          input("The man wouldn't have thought that "+playerName+" could have killed someone, but it isn't hard to believe.")
+        if simCenterManRelation == -3:
+          input("He tells the court that "+playerName+" seemed suspicious from the beginning.")
+          input("He explains that "+playerPronoun" immediately accused him of the attack with no evidence.")
+          input("The man finds it possible that "+playerName+" could have killed someone, and the evidence certainly suggests so.")
+        input("The court still believes that "+playerName+" is guilty.")
+        input(playerCapitalPronoun+" realizes that calling him to the stand did not help "+playerPosPronoun+" case.")
+   
   
   
 initialize()
