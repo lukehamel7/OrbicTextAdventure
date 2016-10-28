@@ -646,7 +646,14 @@ def courtroomFirstTime():
           input("The man finds it possible that "+playerName+" could have killed someone, and the evidence certainly suggests so.")
         input("The court still believes that "+playerName+" is guilty.")
         input(playerCapitalPronoun+" realizes that calling him to the stand did not help "+playerPosPronoun+" case.")
-   
+      if response == 3:
+        input(playerName+" accuses the Reptilian man "+playerPronoun+" saw in the streets.")
+        input("After checking the surveillance tapes, the police are finally able to find the man.")
+        input("Eventually he is brought to the stand and begins to testify.")
+        input("'How was I even accused of this?'")
+        input("'I had nothing to do with the crime whatsoever, I was just lost on the street.'")
+        input("'Honestly, I shouldn't have even been brought here.'")
+        input("The court dismisses him, and 
   
   
 initialize()
