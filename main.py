@@ -614,46 +614,46 @@ def courtroomFirstTime():
     print("(2) Call the man who saw the sim center attack to the stand")
     print("(3) Accuse the Reptilian man in the streets")
     response = input("? ")
-      if response == 1:
-        input(playerName+" calls the apartment's secretary to the stand.")
-        input("She had already testified about the keycard, but "+playerName+" suggests she testify about "+playerPosPronoun+".")
-        if apartmentWomanRelation == 3:
-          input("She tells the court that "+playerName+" seemed like a nice person.")
-          input("She doesn't want to believe that "+playerPronoun+" killed someone, but thinks that anything is possible.")
-        if apartmentWomanRelation == -3:
-          input("She tells the court that "+playerName+" seemed like a rude person.")
-          input("She had doubts about "+playerObjectPronoun+" killing someone, but the evidence makes it clear.")
-        if apartmentWomanRelation == 0:
-          input("She tells the court that "+playerName+" seemed like an awkward person.")
-          input("While "+playerPosPronoun+" social skills seemed lacking, she finds it hard to believe that "+playerPronoun+" killed someone.")
+    if response == 1:
+      input(playerName+" calls the apartment's secretary to the stand.")
+      input("She had already testified about the keycard, but "+playerName+" suggests she testify about "+playerPosPronoun+".")
+      if apartmentWomanRelation == 3:
+        input("She tells the court that "+playerName+" seemed like a nice person.")
+        input("She doesn't want to believe that "+playerPronoun+" killed someone, but thinks that anything is possible.")
+      if apartmentWomanRelation == -3:
+        input("She tells the court that "+playerName+" seemed like a rude person.")
+        input("She had doubts about "+playerObjectPronoun+" killing someone, but the evidence makes it clear.")
+      if apartmentWomanRelation == 0:
+        input("She tells the court that "+playerName+" seemed like an awkward person.")
+        input("While "+playerPosPronoun+" social skills seemed lacking, she finds it hard to believe that "+playerPronoun+" killed someone.")
         input("The court still believes that "+playerName+" is guilty.")
         input(playerName+" realizes that calling her to the witness stand did not help his case.")
-      if response == 2:
-        input(playerName+" calls the man "+playerPronoun+" talked to at the sim center to the stand.")
-        input("They didn't talk for long, but it must be better than nothing.")
-        input("The man is eventually found and brought to the witness stand.")
-        if simCenterManRelation == 3:
-          input("He tells the court that "+playerName+" seemed like a good person.")
-          input("He explains that they didn't talk for long, but "+playerName+" was worried about his health.")
-          input("The man doesn't think that "+playerName+" could have killed someone, but the evidence speaks for itself.")
-        if simCenterManRelation == 0:
-          input("He tells the court that "+playerName+" didn't seem like he would kill someone.")
-          input("He explains that they didn't talk for long, and "+playerName+" was only interested in the details of the attack.")
-          input("The man wouldn't have thought that "+playerName+" could have killed someone, but it isn't hard to believe.")
-        if simCenterManRelation == -3:
-          input("He tells the court that "+playerName+" seemed suspicious from the beginning.")
-          input("He explains that "+playerPronoun" immediately accused him of the attack with no evidence.")
-          input("The man finds it possible that "+playerName+" could have killed someone, and the evidence certainly suggests so.")
-        input("The court still believes that "+playerName+" is guilty.")
-        input(playerCapitalPronoun+" realizes that calling him to the stand did not help "+playerPosPronoun+" case.")
-      if response == 3:
-        input(playerName+" accuses the Reptilian man "+playerPronoun+" saw in the streets.")
-        input("After checking the surveillance tapes, the police are finally able to find the man.")
-        input("Eventually he is brought to the stand and begins to testify.")
-        input("'How was I even accused of this?'")
-        input("'I had nothing to do with the crime whatsoever, I was just lost on the street.'")
-        input("'Honestly, I shouldn't have even been brought here.'")
-        input("The court dismisses him, and 
+    if response == 2:
+      input(playerName+" calls the man "+playerPronoun+" talked to at the sim center to the stand.")
+      input("They didn't talk for long, but it must be better than nothing.")
+      input("The man is eventually found and brought to the witness stand.")
+      if simCenterManRelation == 3:
+        input("He tells the court that "+playerName+" seemed like a good person.")
+        input("He explains that they didn't talk for long, but "+playerName+" was worried about his health.")
+        input("The man doesn't think that "+playerName+" could have killed someone, but the evidence speaks for itself.")
+      if simCenterManRelation == 0:
+        input("He tells the court that "+playerName+" didn't seem like he would kill someone.")
+        input("He explains that they didn't talk for long, and "+playerName+" was only interested in the details of the attack.")
+        input("The man wouldn't have thought that "+playerName+" could have killed someone, but it isn't hard to believe.")
+      if simCenterManRelation == -3:
+        input("He tells the court that "+playerName+" seemed suspicious from the beginning.")
+        input("He explains that "+playerPronoun" immediately accused him of the attack with no evidence.")
+        input("The man finds it possible that "+playerName+" could have killed someone, and the evidence certainly suggests so.")
+      input("The court still believes that "+playerName+" is guilty.")
+      input(playerCapitalPronoun+" realizes that calling him to the stand did not help "+playerPosPronoun+" case.")
+    if response == 3:
+      input(playerName+" accuses the Reptilian man "+playerPronoun+" saw in the streets.")
+      input("After checking the surveillance tapes, the police are finally able to find the man.")
+      input("Eventually he is brought to the stand and begins to testify.")
+      input("'How was I even accused of this?'")
+      input("'I had nothing to do with the crime whatsoever, I was just lost on the street.'")
+      input("'Honestly, I shouldn't have even been brought here.'")
+      input("The court dismisses him, and "+playerName+" realizes that he had no relation to the case.")
   
   
 initialize()
