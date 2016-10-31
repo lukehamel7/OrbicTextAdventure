@@ -642,7 +642,7 @@ def courtroomFirstTime():
         input("The man wouldn't have thought that "+playerName+" could have killed someone, but it isn't hard to believe.")
       if simCenterManRelation == -3:
         input("He tells the court that "+playerName+" seemed suspicious from the beginning.")
-        input("He explains that "+playerPronoun" immediately accused him of the attack with no evidence.")
+        input("He explains that "+playerPronoun+" immediately accused him of the attack with no evidence.")
         input("The man finds it possible that "+playerName+" could have killed someone, and the evidence certainly suggests so.")
       input("The court still believes that "+playerName+" is guilty.")
       input(playerCapitalPronoun+" realizes that calling him to the stand did not help "+playerPosPronoun+" case.")
