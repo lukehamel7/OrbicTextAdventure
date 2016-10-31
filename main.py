@@ -123,7 +123,9 @@ def core():
   if location == playerName+"'s apartment" and apartmentMurderSceneCheck == True:
     apartmentMurderScene()
   if location == "the Defense preparation room" and prepRoomFirstTimeCheck == True:
-    prepRoomFirstTime
+    prepRoomFirstTime()
+  if location == "[Asteroid] courtroom #4" and courtroomFirstTimeCheck == True:
+    courtroomFirstTime()
   response = input(playerName+" is currently at "+location+". What would you like to do? ")
   if response.lower() == "ship" and location == playerName+"'s ship":
     ship()
@@ -583,7 +585,7 @@ def prepRoomFirstTime():
   print()
   input("2 months later.")
   print()
-  input(playerName+"sits in the preparation room while "+playerPosPronoun+" lawyer talks to "+playerObjectPronoun)
+  input(playerName+"sits in the preparation room while "+playerPosPronoun+" lawyer talks to "+playerObjectPronoun+".")
   input(playerCapitalPronoun+" finds it hard to pay attention, and can't help but think of why this happened.")
   input("With no motive, one would think that "+playerName+" would be found innocent.")
   input("However, the evidence against "+playerObjectPronoun+" is enough.")
@@ -654,6 +656,16 @@ def courtroomFirstTime():
       input("'I had nothing to do with the crime whatsoever, I was just lost on the street.'")
       input("'Honestly, I shouldn't have even been brought here.'")
       input("The court dismisses him, and "+playerName+" realizes that he had no relation to the case.")
+      global lizardManRelation
+      lizardManRelation = -3
+  input("After the witness leaves the stand, the courtroom has fallen to silence.")
+  input("The Judge allows the jurors to leave the room to make their decision.")
+  input(playerName+" waits, but pays attention to nothing.")
+  input("Through all of the court proceedings, "+playerPronoun+" has no hopes of being found innocent.")
+  input("After some time has passed, the jurors exit and the Judge announces the verdict.")
+  input(playerName+" isn't surprised.")
+  input("Guilty.")
+  
   
   
 initialize()
