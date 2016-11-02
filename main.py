@@ -573,8 +573,8 @@ def apartmentMurderScene():
   planet = "asteroid"
   global location
   location = "the Defense preparation room"
-  response = input("Do you want to save?")
   while True:
+    response = input("Do you want to save?")
     if response.lower() == "yes" or response.lower() == "y":
       save()
     if response.lower() == "no" or response.lower() == "n":
@@ -616,7 +616,7 @@ def courtroomFirstTime():
     print("(2) Call the man who saw the sim center attack to the stand")
     print("(3) Accuse the Reptilian man in the streets")
     response = input("? ")
-    if response == 1:
+    if response == "1":
       input(playerName+" calls the apartment's secretary to the stand.")
       input("She had already testified about the keycard, but "+playerName+" suggests she testify about "+playerPosPronoun+".")
       if apartmentWomanRelation == 3:
@@ -628,9 +628,10 @@ def courtroomFirstTime():
       if apartmentWomanRelation == 0:
         input("She tells the court that "+playerName+" seemed like an awkward person.")
         input("While "+playerPosPronoun+" social skills seemed lacking, she finds it hard to believe that "+playerPronoun+" killed someone.")
-        input("The court still believes that "+playerName+" is guilty.")
-        input(playerName+" realizes that calling her to the witness stand did not help his case.")
-    if response == 2:
+      input("The court still believes that "+playerName+" is guilty.")
+      input(playerName+" realizes that calling her to the witness stand did not help his case.")
+      break
+    if response == "2":
       input(playerName+" calls the man "+playerPronoun+" talked to at the sim center to the stand.")
       input("They didn't talk for long, but it must be better than nothing.")
       input("The man is eventually found and brought to the witness stand.")
@@ -648,7 +649,8 @@ def courtroomFirstTime():
         input("The man finds it possible that "+playerName+" could have killed someone, and the evidence certainly suggests so.")
       input("The court still believes that "+playerName+" is guilty.")
       input(playerCapitalPronoun+" realizes that calling him to the stand did not help "+playerPosPronoun+" case.")
-    if response == 3:
+      break
+    if response == "3":
       input(playerName+" accuses the Reptilian man "+playerPronoun+" saw in the streets.")
       input("After checking the surveillance tapes, the police are finally able to find the man.")
       input("Eventually he is brought to the stand and begins to testify.")
@@ -658,6 +660,7 @@ def courtroomFirstTime():
       input("The court dismisses him, and "+playerName+" realizes that he had no relation to the case.")
       global lizardManRelation
       lizardManRelation = -3
+      break
   input("After the witness leaves the stand, the courtroom has fallen to silence.")
   input("The Judge allows the jurors to leave the room to make their decision.")
   input(playerName+" waits, but pays attention to nothing.")
