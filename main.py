@@ -270,12 +270,19 @@ def investigate():
     core()
   
 def save():
+  while True:
+    response = input("Do you want to save?")
+    if response.lower() == "yes" or response.lower() == "y":
+      break
+    if response.lower() == "no" or response.lower() == "n":
+      core()
   f = open("save.txt","w")
   f.write(playerName)
   f.write(str(playerGender))
   f.write(str(act))
   f.write(str(apartmentWomanRelation))
   f.write(str(simCenterManRelation))
+  core()
 
   
 #Plot events
@@ -573,13 +580,7 @@ def apartmentMurderScene():
   planet = "asteroid"
   global location
   location = "the Defense preparation room"
-  while True:
-    response = input("Do you want to save?")
-    if response.lower() == "yes" or response.lower() == "y":
-      save()
-    if response.lower() == "no" or response.lower() == "n":
-      break
-  core()
+  save()
 
 def prepRoomFirstTime():
   print()
